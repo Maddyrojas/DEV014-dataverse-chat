@@ -1,14 +1,14 @@
 
 import {Home} from './views/Home.js';
-import {About} from './views/About.js';
-import {GroupChat} from './views/GroupChat.js';
+//import {About} from './views/About.js';
+//import {GroupChat} from './views/GroupChat.js';
 import { setRootEl, setRoutes, onURLChange } from './router.js';
 
 const selectRoot = document.getElementById("root");
 const routes = {
   '/': Home,
-  '/about' : About,
-  '/groupChat' : GroupChat,
+  //'/about' : About,
+  //'/groupChat' : GroupChat,
 };
  
 setRoutes(routes); // Assign the routes

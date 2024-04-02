@@ -3,6 +3,7 @@ let rootEl; //referencia al elemento html en donde pondremos contenido de nuestr
 
 export const setRootEl = (el) => {
     rootEl = el;
+    console.log(rootEl);
 }
 
 export const setRoutes = (routes) => {
@@ -18,14 +19,8 @@ const queryStringToObject = (queryString) => {
 }
 
 const renderView = (pathname, props={}) => {
-    const root = rootEl;
-    root.innerHTML = "";// clear the root element
-    if (ROUTES[pathname]) {// find the correct view in ROUTES for the pathname
-        const show = ROUTES[pathname](props);
-        root.append(show); //appendChild
-    } else {
-        root.append(ROUTES["/error"]());
-    }
+    rootEl.innerHTML = "";// clear the root element
+    rootEl.appendChild(pathname(props)); // find the correct view in ROUTES for the pathname
 } 
 
 export const navigateTo = (pathname, props) => {
