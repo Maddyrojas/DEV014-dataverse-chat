@@ -5,7 +5,7 @@ import { filterData } from '../lib/dataFunctions.js';
 
 export const Home = () => {
     const home = document.createElement("div");
-    //home.classList.add("");
+    home.classList.add("homeclass");
 
     //incluir todo lo demas
     home.append(Header(),Footer());
