@@ -4,106 +4,20 @@ import { MainHome } from "../components/mainHome.js";
 import data from "../data/dataset.js";
 import { filterData, sortData, computeStats } from '../lib/dataFunction.js';
 
-export const Home = () => {
-  const home = document.createElement("div");
-  home.classList.add("homeclass");
-document.addEventListener('DOMContentLoaded', () => {
-  let newData = data;
-  const mainHomeElement = MainHome();
-  const content = mainHomeElement.querySelector('#root');
-  const filterProvincia = mainHomeElement.querySelector('select[name="filtrarProvincia"]');
-  const sortOption = mainHomeElement.querySelector('select[name="ordenar"]');
-  const sortAsc = mainHomeElement.querySelector('input[value="asc"]');
-  const sortDesc = mainHomeElement.querySelector('input[value="desc"]');
-  const btnLimpiar = mainHomeElement.querySelector('button[data-testid="button-clear"]');
-  const btnHeader = mainHomeElement.querySelector('button[name="btn-header"]');
-  const filterZone = mainHomeElement.querySelector('div[name="filter-zone"]');
-  content.appendChild(renderItems(sortData(data, sortOption.value, sortAsc.value)));
-  renderComputeStats(newData);
-  home.append(Header(), mainHomeElement, Footer());
-  /*
-Evento Filtrar por provincia
-Escucha los cambios en el select de filtrarProvincia
-tambien conserva la condicion del evento ordenar
-*/
-filterProvincia.addEventListener('change', () => {
-  mainHomeElement.querySelector('ul[name="ul-root"]').remove();
-  if (filterProvincia.value === 'All Options') { // Si es todas las opciones
-    newData = data;
-    if (sortAsc.checked) {
-      content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
-    } else {
-      content.appendChild(renderItems(sortData(newData, sortOption.value, sortDesc.value)));
-    }
-    renderComputeStats(newData);
-  } else { // si es por filtro de location
-    newData = filterData(data, 'location', filterProvincia.value); // llama el metodo filtrar y lo asigna a dataOriginFilter
-    if (sortAsc.checked) {
-      content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value))); // filtrar y ordenar por lo seleccionado
-    } else {
-      content.appendChild(renderItems(sortData(newData, sortOption.value, sortDesc.value)));
-    }
-    renderComputeStats(newData);
-  }
-});
+const mainHomeElement = MainHome();
+function renderComputeStats(data) {
+  const arrCompute = computeStats(data);
+  mainHomeElement.querySelector('strong[id="aventura"]').innerHTML = ((arrCompute.find(typeTour => typeTour.tipoTurismo === "turismo de aventura")).porcentaje).toFixed(2) + "%";
+  mainHomeElement.querySelector('strong[id="playa"]').innerHTML = ((arrCompute.find(typeTour => typeTour.tipoTurismo === "turismo de playa")).porcentaje).toFixed(2) + "%";
+  mainHomeElement.querySelector('strong[id="cultura"]').innerHTML = ((arrCompute.find(typeTour => typeTour.tipoTurismo === "turismo cultural")).porcentaje).toFixed(2) + "%";
+}
 
-/*
-Evento ordenar por Nombre o Precio
-Primero verifica la seleccion del radio (si es ascendente o descendente)
-Segundo verifica si la data esta filtrada por location o si la seleccion es de todas las opciones
-*/
-sortOption.addEventListener('change', () => {
-  mainHomeElement.querySelector('ul[name="ul-root"]').remove();
-  if (sortAsc.checked) {
-    content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
-  }
-  if (sortDesc.checked) {
-    content.appendChild(renderItems(sortData(newData, sortOption.value, sortDesc.value)));
-  }
-});
-
-/*
-Evento click por ascendente
-Verifica si son todas las opciones o si esta filtrada por location
-Y finalmente muestra una data ordenada de forma ascendente
-*/
-sortAsc.addEventListener('click', (event) => {
-  mainHomeElement.querySelector('ul[name="ul-root"]').remove();
-  content.appendChild(renderItems(sortData(newData, sortOption.value, event.target.value)));
-});
-
-/*
-Evento click por descendente
-Verifica si son todas las opciones o si esta filtrada por location
-Y finalmente muestra una data ordenada de forma descendente
-*/
-sortDesc.addEventListener('click', (event) => {
-  mainHomeElement.querySelector('ul[name="ul-root"]').remove();
-  content.appendChild(renderItems(sortData(newData, sortOption.value, event.target.value)));
-});
-
-btnLimpiar.addEventListener('click', () => {
-  mainHomeElement.querySelector('ul[name="ul-root"]').remove();
-  filterProvincia.selectedIndex = 0;
-  sortOption.selectedIndex = 0;
-  sortAsc.checked = true;
-  newData = data;
-  content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
-  renderComputeStats(newData);
-});
-btnHeader.addEventListener('click', () => {
-  filterZone.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-
-mainHomeElement.querySelector('button[name="btn-subcrip"]').addEventListener('click', () => {
-  filterZone.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-
-function renderItems(data) {
-  const ul = mainHomeElement.createElement('ul');
+function renderItems(dataset) {
+  const ul = document.createElement('ul');
+  console.log(ul);
   ul.setAttribute('name', 'ul-root');
-  data.forEach(function (element) {
-    const list = mainHomeElement.createElement('li');
+  dataset.forEach(function (element) {
+    const list = document.createElement('li');
     list.setAttribute('itemscope', '');
     list.setAttribute('itemtype', element.name);
     list.classList.add('card');
@@ -123,13 +37,82 @@ function renderItems(data) {
   return ul;
 }
 
-function renderComputeStats(data) {
-  const arrCompute = computeStats(data);
-  mainHomeElement.querySelector('strong[id="aventura"]').innerHTML = ((arrCompute.find(typeTour => typeTour.tipoTurismo === "turismo de aventura")).porcentaje).toFixed(2) + "%";
-  mainHomeElement.querySelector('strong[id="playa"]').innerHTML = ((arrCompute.find(typeTour => typeTour.tipoTurismo === "turismo de playa")).porcentaje).toFixed(2) + "%";
-  mainHomeElement.querySelector('strong[id="cultura"]').innerHTML = ((arrCompute.find(typeTour => typeTour.tipoTurismo === "turismo cultural")).porcentaje).toFixed(2) + "%";
-}
-});
+export const Home = () => {
+  const home = document.createElement("div");
+  home.classList.add("homeclass");
 
+  let newData = data;
+  const content = mainHomeElement.querySelector('#root');
+  const filterProvincia = mainHomeElement.querySelector('select[name="filtrarProvincia"]');
+  const sortOption = mainHomeElement.querySelector('select[name="ordenar"]');
+  const sortAsc = mainHomeElement.querySelector('input[value="asc"]');
+  const sortDesc = mainHomeElement.querySelector('input[value="desc"]');
+  const btnLimpiar = mainHomeElement.querySelector('button[data-testid="button-clear"]');
+  const btnHeader = Header().querySelector('button[name="btn-header"]');
+  const filterZone = mainHomeElement.querySelector('div[name="filter-zone"]');
+  
+  content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
+  
+  renderComputeStats(newData);
+  
+  filterProvincia.addEventListener('change', () => {
+    mainHomeElement.querySelector('ul[name="ul-root"]').remove();
+    if (filterProvincia.value === 'All Options') {
+      newData = data;
+      if (sortAsc.checked) {
+        content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
+      } else {
+        content.appendChild(renderItems(sortData(newData, sortOption.value, sortDesc.value)));
+      }
+      renderComputeStats(newData);
+    } else { // si es por filtro de location
+      newData = filterData(data, 'location', filterProvincia.value); // llama el metodo filtrar y lo asigna a dataOriginFilter
+      if (sortAsc.checked) {
+        content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value))); // filtrar y ordenar por lo seleccionado
+      } else {
+        content.appendChild(renderItems(sortData(newData, sortOption.value, sortDesc.value)));
+      }
+      renderComputeStats(newData);
+    }
+  });
+
+  sortOption.addEventListener('change', () => {
+    mainHomeElement.querySelector('ul[name="ul-root"]').remove();
+    if (sortAsc.checked) {
+      content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
+    }
+    if (sortDesc.checked) {
+      content.appendChild(renderItems(sortData(newData, sortOption.value, sortDesc.value)));
+    }
+  });
+
+  sortAsc.addEventListener('click', (event) => {
+    mainHomeElement.querySelector('ul[name="ul-root"]').remove();
+    content.appendChild(renderItems(sortData(newData, sortOption.value, event.target.value)));
+  });
+
+  sortDesc.addEventListener('click', (event) => {
+    mainHomeElement.querySelector('ul[name="ul-root"]').remove();
+    content.appendChild(renderItems(sortData(newData, sortOption.value, event.target.value)));
+  });
+
+  btnLimpiar.addEventListener('click', () => {
+    mainHomeElement.querySelector('ul[name="ul-root"]').remove();
+    filterProvincia.selectedIndex = 0;
+    sortOption.selectedIndex = 0;
+    sortAsc.checked = true;
+    newData = data;
+    content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
+    renderComputeStats(newData);
+  });
+
+  btnHeader.addEventListener('click', () => {
+    filterZone.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  
+  Footer().querySelector('button[name="btn-subcrip"]').addEventListener('click', () => {
+    filterZone.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  home.append(Header(), mainHomeElement, Footer());
   return home;
-};
+}

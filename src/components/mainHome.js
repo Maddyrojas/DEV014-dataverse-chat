@@ -1,6 +1,30 @@
 export const MainHome = () => {
     const main = document.createElement("main");
-    main.innerHTML = `   
+    main.innerHTML = `
+        <div class="filter-zone" name="filter-zone">
+            <div class="where-filter">
+                <label for="filter" >¿Donde ir? </label>
+                <select id="filter" data-testid="select-filter" name="filtrarProvincia" value="location">
+                <option value="All Options">Todas las opciones</option>
+                <option value="Puntarenas">Puntarenas</option>
+                <option value="San José">San José</option>
+                <option value="Alajuela">Alajuela</option>
+                <option value="Cartago">Cartago</option>
+                <option value="Guanacaste">Guanacaste</option>
+                <option value="Limón">Limón</option>
+                </select>
+            </div>
+            <button class="button-clear" data-testid="button-clear">Limpiar</button>
+        </div>
+        <div class="sort-zone" name="sort-zone">
+            <label for="sort">Ordenar por</label>
+            <select id="sort" data-testid="select-sort" name="ordenar">
+                <option value="name">Nombre</option>
+                <option value="gastoPromedio">Precio</option>
+            </select>
+            <label for="asc"><input type="radio" id="asc" name="sort-order" value="asc" checked />Ascendente</label>
+            <label for="desc"><input type="radio" id="desc" name="sort-order" value="desc" />Descendente</label>
+        </div>
         <h2>VAMOS A TURISTEAR</h2>
         <div id="root">
         </div>
