@@ -63,15 +63,6 @@ header {
   align-items: end;
   background-color: rgba(83, 8, 3, 0.25);
 }
-<<<<<<< HEAD
-.tx-nav {
-  color: white;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-}
-=======
->>>>>>> 7b3969b2d1d8a9973118d6f843274b5018c6a295
 #search-header{
   margin: 0px 60px;
   border-radius: 5px;
@@ -288,7 +279,6 @@ ul {
   text-align: center;
   font-size: 20px;
 }
-<<<<<<< HEAD
 /*groupChat*/
 #cajaSalida {
   width: 200px; 
@@ -296,9 +286,6 @@ ul {
     border: 1px solid black; 
     padding: 10px;
 }
-=======
-
->>>>>>> 7b3969b2d1d8a9973118d6f843274b5018c6a295
 /*footer */
 footer {
   position: relative;
@@ -457,11 +444,7 @@ hr{
   .foot{
     height: 50px;
   }
-<<<<<<< HEAD
-  .tx-nav, #search-header, .btn-header, #infoot1, #infoot2, .foot1{
-=======
   #search-header, .btn-header, #infoot1, #infoot2, .foot1{
->>>>>>> 7b3969b2d1d8a9973118d6f843274b5018c6a295
     display: none;
   }
   .foot2{
@@ -563,11 +546,7 @@ hr{
   .infoot{
     width: 30%;
   }
-<<<<<<< HEAD
-  .tx-nav,#search-header, .btn-header, #infoot2{
-=======
   #search-header, .btn-header, #infoot2{
->>>>>>> 7b3969b2d1d8a9973118d6f843274b5018c6a295
     display: none;
   }
   .foot{
