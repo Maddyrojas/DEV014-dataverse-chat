@@ -1,7 +1,6 @@
 export const MainHome = () => {
     const main = document.createElement("main");
     main.innerHTML = `   
-    <main>
         <h2>VAMOS A TURISTEAR</h2>
         <div id="root">
         </div>
@@ -39,7 +38,6 @@ export const MainHome = () => {
                 <dt class="compute-element"><strong id="playa">0%</strong> Destinos</dt>
             </div>
         </div>
-    </main>
     `;
     return main;
   };
