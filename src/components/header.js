@@ -3,17 +3,15 @@ export const Header = () => {
     header.innerHTML = `   
     <div class="top-page">
         <div class="nav-zone">
-            <span class="tx-nav">(+506) 2637 0000 _____ info@crtour.com</span>
             <nav>
                 <ul>
-                <li><a href="">INICIO</a></li>
-                <li><a href="">TOURS</a></li>
-                <li><a href="">DETALLES</a></li>
-                <li><a href="">ACTIVIDADES</a></li>
-                <li><a href="">ZONAS TURISTICAS</a></li>
+                <li><a href="">HOME</a></li>
+                <li><a href="">DETAILS</a></li>
+                <li><a href="">CONTACT</a></li>
                 </ul>
             </nav>
             <input type="search" name="search-header" id="search-header" placeholder="¿Qué lugar estas buscando?">
+            <button class="btn-grupChat" name="btn-grupChat">CHAT GRUPAL</button>
         </div>
         <h1>Costa Rica te enamora</h1>
         <em class="text-welcome">Conocé los mejores rincones de nuestro país, descrubriendo todas las actividades que Costa Rica nos ofrece para hacer y disfrutar.</em>
