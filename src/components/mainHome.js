@@ -4,7 +4,6 @@ export const MainHome = () => {
     <main>
         <h2>VAMOS A TURISTEAR</h2>
         <div id="root">
-            <ul name="ul-root"></ul>
         </div>
         <div class="text-aventura">
             <a class="a-text">DESCUBRIR POR ACTIVIDAD</a>
