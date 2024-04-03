@@ -3,7 +3,6 @@ let rootEl; //referencia al elemento html en donde pondremos contenido de nuestr
 
 export const setRootEl = (el) => {
     rootEl = el;
-    console.log(rootEl);
 }
 
 export const setRoutes = (routes) => {
@@ -13,8 +12,8 @@ export const setRoutes = (routes) => {
 }
 
 const queryStringToObject = (queryString) => {
-    const newUrlParams = new URLSearchParams(queryString.search);// convert queryString to URLSearchParams
-    const objectUrlParams = Object.fromEntries(newUrlParams.entries());// convert URLSearchParams to an object
+    const newUrlParams = new URLSearchParams(queryString.search);// convert to URLSearchParams
+    const objectUrlParams = Object.fromEntries(newUrlParams.entries());// convert to an object
     return objectUrlParams; 
 }
 
