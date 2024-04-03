@@ -3,9 +3,11 @@ import { Footer } from "../components/footer.js";
 import { MainHome } from "../components/mainHome.js";
 import data from "../data/dataset.js";
 import { filterData, sortData, computeStats } from '../lib/dataFunction.js';
-import { getApiKey, setApiKey } from '../lib/apiKey.js';
 
 const mainHomeElement = MainHome();
+const headerElement = Header();
+const footerElement = Footer();
+
 function renderComputeStats(data) {
   const arrCompute = computeStats(data);
   mainHomeElement.querySelector('strong[id="aventura"]').innerHTML = ((arrCompute.find(typeTour => typeTour.tipoTurismo === "turismo de aventura")).porcentaje).toFixed(2) + "%";
@@ -15,7 +17,6 @@ function renderComputeStats(data) {
 
 function renderItems(dataset) {
   const ul = document.createElement('ul');
-  console.log(ul);
   ul.setAttribute('name', 'ul-root');
   dataset.forEach(function (element) {
     const list = document.createElement('li');
@@ -40,8 +41,6 @@ function renderItems(dataset) {
 
 export const Home = () => {
   const home = document.createElement("div");
-  home.classList.add("homeclass");
-
   let newData = data;
   const content = mainHomeElement.querySelector('#root');
   const filterProvincia = mainHomeElement.querySelector('select[name="filtrarProvincia"]');
@@ -49,16 +48,37 @@ export const Home = () => {
   const sortAsc = mainHomeElement.querySelector('input[value="asc"]');
   const sortDesc = mainHomeElement.querySelector('input[value="desc"]');
   const btnLimpiar = mainHomeElement.querySelector('button[data-testid="button-clear"]');
-  const btnHeader = Header().querySelector('button[name="btn-header"]');
+  const btnHeader = headerElement.querySelector('button[name="btn-header"]');
+  const textSearch = headerElement.querySelector('#search-header');
   const filterZone = mainHomeElement.querySelector('div[name="filter-zone"]');
   const modal = document.getElementById("modal");
   const closemodal = document.getElementById("close-modal");
+  const btnApi = document.querySelector('button[type="submit"]');
+  const chexApi = document.getElementById('miCheckbox');
+  const textApi = document.getElementById('apikey');
+  const textName = document.getElementById('name');
+  
   content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
   renderComputeStats(newData);
   
-  closemodal.onclick = function() {
+  btnApi.addEventListener('click', (event) => {
+    modal.style.display = "none";
+    alert(textName.value+" Tu ApiKey es correcta \n\n\nBienvenida a Pura Vida Tours");
+    textSearch.value=textName.value;
+  });
+
+  chexApi.addEventListener('change', () => {
+    if(chexApi.checked) {
+      console.log(textApi);
+      textApi.value="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";
+    } else {
+      textApi.value="";
+    }
+  });
+
+  closemodal.addEventListener('click', (event) => {
       modal.style.display = "none";
-  }
+  });
 
   filterProvincia.addEventListener('change', () => {
     mainHomeElement.querySelector('ul[name="ul-root"]').remove();
@@ -115,9 +135,10 @@ export const Home = () => {
     filterZone.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   
-  Footer().querySelector('button[name="btn-subcrip"]').addEventListener('click', () => {
+  footerElement.querySelector('button[name="btn-subcrip"]').addEventListener('click', () => {
     filterZone.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
-  home.append(Header(), mainHomeElement, Footer());
+  
+  home.append(headerElement, mainHomeElement, footerElement);
   return home;
 }
