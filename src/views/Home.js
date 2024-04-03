@@ -3,6 +3,7 @@ import { Footer } from "../components/footer.js";
 import { MainHome } from "../components/mainHome.js";
 import data from "../data/dataset.js";
 import { filterData, sortData, computeStats } from '../lib/dataFunction.js';
+import { getApiKey, setApiKey } from '../lib/apiKey.js';
 
 const mainHomeElement = MainHome();
 function renderComputeStats(data) {
