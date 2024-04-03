@@ -50,11 +50,15 @@ export const Home = () => {
   const btnLimpiar = mainHomeElement.querySelector('button[data-testid="button-clear"]');
   const btnHeader = Header().querySelector('button[name="btn-header"]');
   const filterZone = mainHomeElement.querySelector('div[name="filter-zone"]');
-  
+  const modal = document.getElementById("modal");
+  const closemodal = document.getElementById("close-modal");
   content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
-  
   renderComputeStats(newData);
   
+  closemodal.onclick = function() {
+      modal.style.display = "none";
+  }
+
   filterProvincia.addEventListener('change', () => {
     mainHomeElement.querySelector('ul[name="ul-root"]').remove();
     if (filterProvincia.value === 'All Options') {
