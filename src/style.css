@@ -46,27 +46,72 @@ body {
 
 /* Estilo del contenido del modal */
 .modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #fefefe;
   margin: 15% auto;
+  margin-top: 5%;
+  border-radius: 44px;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  width: 60%;
+  height: 60%;
+  box-shadow: 6px 7px 10px #f569606b;
 }
 
 /* Botón para cerrar el modal */
 .close {
-  color: #aaa;
-  float: right;
+  color: #0791BE;
+  margin-left: auto;
   font-size: 28px;
   font-weight: bold;
+  margin-right: 1%;
+  transform: translate(-2px, -110px);
 }
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #F56960;
   text-decoration: none;
   cursor: pointer;
 }
+
+.modal-content #nombre {
+  color: #000000;
+  padding: 1%;
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 3px;
+  width: 30%;
+  text-align: center;
+}
+
+.modal-content #apikey {
+  color: #000000;
+  padding: 1%;
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 3px;
+  width: 30%;
+  text-align: center;
+}
+
+.modal-content button {
+  color: #fff;
+  background-color: #0791BE;
+  border: none;
+  width: 9%;
+  padding: 0.6%;
+  border-radius: 3px;
+}
+
+.checkApi {
+  margin-top: -2.2%;
+  margin-right: -20%;
+  height: 40px;
+}
+
 /* 
 top-page
 header
