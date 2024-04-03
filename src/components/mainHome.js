@@ -3,7 +3,7 @@ export const MainHome = () => {
     main.innerHTML = `
         <div class="filter-zone" name="filter-zone">
             <div class="where-filter">
-                <label for="filter" >¿Donde ir? </label>
+                <label for="filter" >¿A donde ir? </label>
                 <select id="filter" data-testid="select-filter" name="filtrarProvincia" value="location">
                 <option value="All Options">Todas las opciones</option>
                 <option value="Puntarenas">Puntarenas</option>

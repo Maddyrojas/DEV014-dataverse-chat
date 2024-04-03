@@ -5,12 +5,12 @@ export const Header = () => {
         <div class="nav-zone">
             <nav>
                 <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="">DETAILS</a></li>
-                <li><a href="">CONTACT</a></li>
+                    <li class="li-nav"><a href="">HOME</a></li>
+                    <li class="li-nav"><a href="">DETAILS</a></li>
+                    <li class="li-nav"><a href="">CONTACT</a></li>
                 </ul>
+                <input type="search" name="search-header" id="search-header" placeholder="¿Qué lugar estas buscando?">
             </nav>
-            <input type="search" name="search-header" id="search-header" placeholder="¿Qué lugar estas buscando?">
             <button class="btn-grupChat" name="btn-grupChat">CHAT GRUPAL</button>
         </div>
         <h1>Costa Rica te enamora</h1>

@@ -73,7 +73,7 @@ header
 filter-zone
 sort-zone
 */
-.top-page {
+header {
   background-image: url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/header.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@ sort-zone
   background-attachment: fixed;
   height: 100vh;
 }
-header {
+.top-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,21 +89,46 @@ header {
 }
 .nav-zone{
   margin-top: 0px;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
   width: 100%;
   height: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: end;
-  align-items: end;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(83, 8, 3, 0.25);
 }
+nav{
+  margin-left: 40px;
+  display: flex;
+  justify-content: center; /* Centra los elementos dentro de este div */
+  flex-grow: 1; /* Permite que este div ocupe el espacio disponible */
+}
+.li-nav {
+  margin-top: 10px;
+  margin-right: 10px;
+}
 #search-header{
-  margin: 0px 60px;
+  margin-left: 40px;
   border-radius: 5px;
   width: 25%;
   height: 40px;
   text-align: center; /*El texto interno del cuadro search se alinea*/
+}
+.btn-grupChat{
+  width: 15%;
+  height: 35px;
+  color: white;
+  border-radius: 50px;
+  border: 5px #F56960;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0.5, 0.5);
+  cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+  transition: background-color 0.3s; /* Suaviza la transición de color */
+  margin-right: 40px;
+}
+.btn-grupChat:hover {
+  background-color: white; /* Color de fondo al pasar el ratón por encima */
+  color: #000;
 }
 h1 {
   margin-top: 25px;
@@ -379,7 +404,7 @@ hr{
 
 /* media query*/
 @media (max-width: 785px) { /*phone*/
-  .top-page {
+  header {
     height: 55vh;
     background-image: url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/phone.jpg);
     background-position: initial;
@@ -401,6 +426,9 @@ hr{
   .nav-zone{
     height: 6vh;
     justify-content: center;
+  }
+  .btn-grupChat{
+    font-size: 1.5vh;
   }
   h1{
     font-size: 50px;
@@ -509,7 +537,7 @@ hr{
   }
 }
 @media (min-width: 785px) and (max-width: 1000px) { /*tablet*/
-  .top-page {
+  header {
     height: 75vh;
     background-image: url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/tablet.jpg);
     background-position: initial;
@@ -576,646 +604,6 @@ hr{
     width: 30%;
   }
   #search-header, .btn-header, #infoot2{
-    display: none;
-  }
-  .foot{
-    height: 80px;
-  }
-  .foot1, .foot2{
-    font-size: 15px;
-  }
-  .text-aventura h1 {
-    font-family: "Hind Siliguri", sans-serif;
-    font-size: 43px;
-    font-weight: 500;
-    color: #101F46;
-    text-shadow: 0px 0 #536899, 0px 0px 0 #536899, 0px 0px 0 #536899, 0px 0px 0 #536899;
-    border: none;
-    margin-top: 0;
-  }
-  .compute-box img {
-    width: 16vh;
-    height: 16vh;
-  }
-  .compute-box {
-    padding: 2vh;
-    width: 24vh;
-    height: 30vh;
-  }
-}
-@media (min-width: 1000px) {/*laptop*/
-  .imagine-cutted {
-    width: 45vh;
-    height: 40vh;
-    float: right;
-    clip-path: polygon(39% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-  .card {
-    margin-bottom: 10px;
-    width: 48%;
-    height: 40vh;
-    min-width: 770px;
-  }
-  .divDescription dd {
-    width: 44%;
-    height: 13.3vh;
-    padding-left: 16px;
-  }
-  #bntProvincia {
-    height: 5.5vh;
-    width: 24%;
-    margin-right: -32px;
-    text-align: left;
-    padding-left: 2vh;
-  }
-  #bntReadMore {
-    padding-left: 10vh;
-    text-align: center;
-    padding-top: 1vh;
-  }
-  footer {
-    height: 50vh;
-  }
-  .foot{
-    height: 100px;
-  }
-  .text-aventura h1 {
-    font-family: "Hind Siliguri", sans-serif;
-    font-size: 43px;
-    font-weight: 500;
-    color: #101F46;
-    text-shadow: 0px 0 #536899, 0px 0px 0 #536899, 0px 0px 0 #536899, 0px 0px 0 #536899;
-    border: none;
-    margin-top: 0;
-  }
-  .compute-box img {
-    width: 20vh;
-    height: 20vh;
-  }
-  .compute-box {
-    padding: 4vh;
-    width: 28vh;
-    height: 30vh;
-  }
-  .divPrecio dt{
-    align-items: center;
-  }
-}
-/* 
-text
-tittle
-*/
-* {
-  font-family: "Hind Siliguri", sans-serif;
-  font-size: 16px;
-  padding: 0;
-  margin: 0;
-}
-h2 {
-  font-size: 25px;
-  font-weight: bold;
-  font-style: normal;
-  text-align: left;
-  margin: 50px;
-  margin-left: 100px;
-}
-a{
-  text-decoration: none;
-  color: white;
-  margin: 20px;
-} 
-button {
-  background-color: #F56960;
-}
-
-/* body*/
-body {
-  background-color: #fff;
-  margin: 0px;
-  padding: 0px;
-}
-
-/* 
-top-page
-header
-filter-zone
-sort-zone
-*/
-.top-page {
-  background-image: url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/header.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
-}
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.nav-zone{
-  margin-top: 0px;
-  padding-bottom: 30px;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: end;
-  background-color: rgba(83, 8, 3, 0.25);
-}
-.tx-nav {
-  color: white;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-}
-#search-header{
-  margin: 0px 60px;
-  border-radius: 5px;
-  width: 25%;
-  height: 40px;
-  text-align: center; /*El texto interno del cuadro search se alinea*/
-}
-h1 {
-  margin-top: 25px;
-  margin-bottom: 0px;
-  display: flex;
-  font-size: 90px;
-  font-weight: normal;
-  text-align: center;
-  color: #fff;
-  text-shadow: -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000;
-  font-family: 'Satisfy';
-}
-.text-welcome{
-  margin-top: 0px;
-  text-align: center;
-  max-width: 610px;
-  width: 60%;
-  color: #fff;
-  font-size: 17px;
-}
-.btn-header{
-  margin-top: 40px;
-  width: 100px;
-  height: 35px;
-  color: white;
-  border-radius: 5px;
-  border: 5px #F56960;
-}
-.filter-zone{
-  margin: 0 auto;
-  margin-top: -60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  width: 90%;
-  background-color: #dee3ed;
-  border: 2px solid #dee3ed;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: row;
-}
-.where-filter {
-  display: flex;
-  flex-direction: column;
-  max-width: 280px;;
-  width: 40%;
-}
-select[name="filtrarProvincia"] {
-  margin: 7px;
-  margin-left: 0px;
-  font-size: 16px;
-  background-color: rgba(7, 145, 190, 0.35);
-  padding: 5px; 
-  border: 1px solid #ccc;
-  width: 100%;
-  height: 60px;
-  font-size: 20px;
-}
-.button-clear{
-  margin-top: 24px;
-  margin-left: 40px;
-  max-width: 250px;;
-  width: 30%;
-  height: 60px;
-  color: white;
-  border-radius: 5px;
-  border: 5px #F56960;
-  font-size: 20px;
-}
-.sort-zone {
-  margin: 40px auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 50px;
-  max-width: 500px;
-  width: 98%;
-  background-color: #dee3ed;
-  border: 2px solid #dee3ed;
-}
-
-/* 
-ul
-li -> cards
-dd 
-*/
-.card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.divName dd {
-  display: flex;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 20px;
-  width: 44%;
-  height: 10vh;
-  padding-top: 20px;
-  padding-left: 20px;
-  color: #404040;
-  align-items: center;
-}
-.divStars {
-  margin-top: 1vh;
-  padding-left: 20px;
-  color: #0791BE;
-}
-.divDescription dd {
-  display: flex;
-  display: flex-start;
-  color: #B5B5B5;
-  width: 50%;
-}
-.divPrecio dt {
-  display: flex;
-  width: 44%;
-  height: 5vh;
-  padding-left: 16px;
-  color: #424D58;
-  font-family: "Monserrat", sans-serif;
-  font-weight: 550;
-  font-size: 26px;
-}
-.divPrecio span {
-  display: flex;
-  align-items: end;
-  padding-left: 5px;
-  color: #B5B5B5;
-  font-family: "Hind Siliguri", sans-serif;
-  font-weight: 400;
-}
-#bntProvincia {
-  display: flex;
-  float: right;
-  float: inline-end;
-  color: #fff;
-  font-weight: 600;
-  text-transform: uppercase;
-  border: #F56960;
-  align-items: center;
-}
-#bntReadMore {
-  color: #A9B5C1;
-  font-weight: 600;
-  text-transform: uppercase;
-  border: #fff;
-  background-color: #fff;
-}
-ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-/* Compute zone*/
-.text-aventura {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 40px;
-  max-width: 100%;
-}
-.compute-zone {
-  margin: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.compute-box {
-  display: flex;
-  flex-direction: column;
-  text-align: justify;
-  overflow: hidden;
-  align-items: center;
-  border-width: thin;
-  border-style: solid;
-  border-color: #D9D9D9;
-  border-radius: 1vh;
-  justify-content: center;
-}
-.compute-box label{
-  margin-top: 1vh;
-}
-.compute-box dt {
-  color: #F56960;
-}
-.compute-box strong {
-  color: #000;
-}
-.a-text {
-  color: #F56960;
-  margin: 1vh;
-  font-weight: 500;
-}
-.p-text {
-  width: 99vh;
-  text-align: center;
-  font-size: 20px;
-}
-/*groupChat*/
-#cajaSalida {
-  width: 200px; 
-    height: 50px; 
-    border: 1px solid black; 
-    padding: 10px;
-}
-/*footer */
-footer {
-  position: relative;
-  display: flex;
-  text-align: left;
-  margin-top: 20px;
-  padding: 10px;
-  height: 500px;
-  background-color: #383838;
-}
-.zone-infoot{
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-around;
-}
-.infoot{
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  height: 30vh;
-  color: white;
-}
-hr{
-  border: none;
-  height: 2px;
-  background-color: rgba(135, 135, 135, 0.3);
-  margin-top: 5px;
-}
-.btn-subcrip{
-  margin-top: 20px;
-  width: 100%;
-  height: 50px;
-  color: white;
-  border-radius: 5px;
-  border: 5px #F56960;
-  font-size: 20px;
-}
-.foot{
-  position: absolute;
-  background-color: #404040;
-  bottom: 0px;
-  left: 0px;
-  height: 100px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.foot1 {
-  color: white;
-  font-size: 20px;
-  margin-left: 5%;
-
-}
-.foot2 {
-  position: absolute;
-  right: 60px;
-  color: white;
-  font-size: 20px;
-}
-
-/* media query*/
-@media (max-width: 785px) { /*phone*/
-  .top-page {
-    height: 55vh;
-    background-image: url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/phone.jpg);
-    background-position: initial;
-    background-size: contain;
-  }
-  a{
-    font-size: 16px;
-    margin: 8px;
-  }
-  .filter-zone{
-    height: 10vh;
-    margin-top: -30px;
-    width: 98%;
-  }
-  select[name="filtrarProvincia"], .button-clear{
-    font-size: 16px;
-    height: 6vh;
-  }
-  .nav-zone{
-    height: 6vh;
-    justify-content: center;
-  }
-  h1{
-    font-size: 50px;
-  }
-  h2 {
-    margin: 20px;
-    margin-left: 80px;
-  }
-  .divName dd {
-    width: 100%;
-    height: 4vh;
-    padding-left: 20px;
-  }
-  .imagine-cutted {
-    margin: 20px;
-    margin-right: 20px;
-    width: 90%;
-    height: auto;
-    border-radius: 1vh;
-  }
-  .card {
-    width: 84%;
-    height: auto;
-    margin-bottom: 2vh;
-    padding-top: 2vh;
-  }
-  .divDescription dd {
-    width: 90%;
-    height: 6.6vh;
-    padding-left: 18px;
-    padding-top: 1vh;
-  }
-  #bntProvincia {
-    height: 5.5vh;
-    width: 40%;
-    padding-left: 15%;
-    transform: translateY(-576%) translateX(-16.5%);
-    clip-path: polygon(39% 0, 100% 0, 100% 100%, 0% 100%);
-    border-bottom-right-radius: 5px;
-    font-size: 16px;
-  }
-  #bntReadMore {
-    height: 5vh;
-    width: 24vh;
-    text-align: center;
-    transform: translateX(126px);
-  }
-  .divPrecio dt {
-    align-items: center;
-    width: 100%;
-    height: 5.3vh;
-    padding-left: 18px;
-  }
-  footer {
-    height: 25vh;
-  }
-  #infoot3{
-    width: 60%;
-    position: absolute;
-    top: 10%;
-    left: 40%;
-    transform: translateX(-30%); /* El left mueve una 35 y el transform reduce de la midad de lo que se movio par centrar */
-    right: auto;
-  }
-  .btn-subcrip{
-    width: 250px;
-    height: 40px;
-    margin-top: 8px;
-  }
-  .foot{
-    height: 50px;
-  }
-  .tx-nav, #search-header, .btn-header, #infoot1, #infoot2, .foot1{
-    display: none;
-  }
-  .foot2{
-    font-size: 15px;
-    position: absolute;
-    left: 35%;
-    transform: translateX(-25%); /* El left mueve una 35 y el transform reduce de la midad de lo que se movio par centrar */
-    right: 0%;
-  }
-  .text-aventura h1 {
-    font-family: "Hind Siliguri", sans-serif;
-    font-size: 43px;
-    font-weight: 500;
-    color: #101F46;
-    text-shadow: 0px 0 #536899, 0px 0px 0 #536899, 0px 0px 0 #536899, 0px 0px 0 #536899;
-    border: none;
-    margin-top: 0;
-  }
-  .compute-box img {
-    width: 11vh;
-    height: 11vh;
-  }
-  .compute-box {
-    padding: 2vh;
-    width: 17vh;
-    height: 25vh;
-    margin: 1vh;
-  }
-  .p-text {
-    width: 100%;
-    text-align: center;
-    font-size: 19px;
-  }
-}
-@media (min-width: 785px) and (max-width: 1000px) { /*tablet*/
-  .top-page {
-    height: 75vh;
-    background-image: url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/tablet.jpg);
-    background-position: initial;
-    background-size: contain;
-  }
-  .nav-zone{
-    height: 10vh;
-    justify-content: center;
-  }
-  h1{
-    font-size: 70px;
-  }
-  .filter-zone{
-    height: 15vh;
-  }
-  .divName dd {
-    width: 42%;
-    height: 7vh;
-    padding-left: 20px;
-  }
-  .imagine-cutted {
-    width: 45vh;
-    height: 39vh;
-    float: right;
-    clip-path: polygon(39% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-  .card {
-    margin: 10px;
-    min-width:785px;
-    width: 90%;
-    height: 39vh;
-    overflow: hidden;
-  }
-  .divDescription dd {
-    width: 42%;
-    height: 14.85vh;
-    padding-left: 16px;
-  }
-  #bntProvincia {
-    height: 5.6vh;
-    width: 23vh;
-    margin-right: -34px;
-    text-align: left;
-    padding-left: 4vh;
-  }
-  #bntReadMore {
-    height: 7vh;
-    width: 23vh;
-    text-align: center;
-  }
-  .divPrecio dt {
-    align-items: center;
-    width: 42%;
-    height: 5.3vh;
-    padding-left: 16px;
-  }
-  footer {
-    height: 35vh;
-  }
-  .zone-infoot{
-    padding-left: 10%;
-  }
-  .infoot{
-    width: 30%;
-  }
-  .tx-nav,#search-header, .btn-header, #infoot2{
     display: none;
   }
   .foot{
