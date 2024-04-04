@@ -58,6 +58,8 @@ export const Home = () => {
   const textApi = document.getElementById('apikey');
   const textName = document.getElementById('name');
   
+  modal.style.display = "block";
+  
   content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
   renderComputeStats(newData);
   

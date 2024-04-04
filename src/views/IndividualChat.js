@@ -10,5 +10,5 @@ const footerElement = Footer();
 export const IndividualChat = (idTour) => {
   const individualChat = document.createElement("div");
   individualChat.append(headerElement, mainToursElement, footerElement);
-  return idTour;
+  return individualChat;
 }
