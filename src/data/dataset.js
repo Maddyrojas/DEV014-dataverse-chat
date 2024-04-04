@@ -103,8 +103,8 @@ export default [
       "compras": "Tienda de Souvenirs",
       "alimentacion": "Café del Arte"
     }
-},
-{//08_Playa Conchal
+  },
+  {//08_Playa Conchal
     "id": "08_lugarTuristico",
     "name": "Playa Conchal",
     "location": "Guanacaste",
@@ -118,8 +118,8 @@ export default [
       "compras": "Arte y Artesanía Guanacaste",
       "alimentacion": "Restaurante Mariscos Conchal"
     }
-},
-{//09_Parque Nacional Volcán Poás
+  },
+  {//09_Parque Nacional Volcán Poás
     "id": "09_lugarTuristico",
     "name": "Parque Nacional Volcán Poás",
     "location": "Alajuela",
@@ -133,8 +133,8 @@ export default [
       "compras": "Tienda de Recuerdos Poás",
       "alimentacion": "Café Vista al Cráter"
     }
-},
-{//10_Parque Nacional Cahuita
+  },
+  {//10_Parque Nacional Cahuita
     "id": "10_lugarTuristico",
     "name": "Parque Nacional Cahuita",
     "location": "Limón",
@@ -148,8 +148,8 @@ export default [
       "compras": "Artesanías Caribeñas",
       "alimentacion": "Restaurante Sabores del Mar"
     }
-},
-{//11_Isla Tortuga
+  },
+  {//11_Isla Tortuga
     "id": "11_lugarTuristico",
     "name": "Isla Tortuga",
     "location": "Puntarenas",
@@ -163,8 +163,8 @@ export default [
       "compras": "Tienda de Recuerdos Isla Tortuga",
       "alimentacion": "Restaurante Tropical"
     }
-},
-{//12_Santa Teresa
+  },
+  {//12_Santa Teresa
     "id": "12_lugarTuristico",
     "name": "Santa Teresa",
     "location": "Puntarenas",
@@ -178,8 +178,8 @@ export default [
       "compras": "Tiendas Locales",
       "alimentacion": "Restaurante Mar y Arena"
     }
-},
-{//13_Reserva Biológica Isla del Caño
+  },
+  {//13_Reserva Biológica Isla del Caño
     "id": "13_lugarTuristico",
     "name": "Reserva Biológica Isla del Caño",
     "location": "Puntarenas",
@@ -193,8 +193,8 @@ export default [
       "compras": "Tienda de Buceo",
       "alimentacion": "Restaurante Marina del Caño"
     }
-},
-{//14_Playa Hermosa
+  },
+  {//14_Playa Hermosa
     "id": "14_lugarTuristico",
     "name": "Playa Hermosa",
     "location": "Guanacaste",
@@ -208,8 +208,8 @@ export default [
       "compras": "Tienda de Surf",
       "alimentacion": "Restaurante Mar y Cielo"
     }
-},
-{//15_Parque Nacional Barra Honda
+  },
+  {//15_Parque Nacional Barra Honda
     "id": "15_lugarTuristico",
     "name": "Parque Nacional Barra Honda",
     "location": "Guanacaste",
@@ -223,8 +223,8 @@ export default [
       "compras": "Arte y Artesanía Guanacaste",
       "alimentacion": "Café Roca Subterránea"
     }
-},
-{//16_Parque Nacional Carara
+  },
+  {//16_Parque Nacional Carara
     "id": "16_lugarTuristico",
     "name": "Parque Nacional Carara",
     "location": "Puntarenas",
@@ -238,8 +238,8 @@ export default [
       "compras": "Tienda de Souvenirs Carara",
       "alimentacion": "Café Selva Viva"
     }
-},
-{//17_Reserva Nacional Absoluta Cabo Blanco
+  },
+  {//17_Reserva Nacional Absoluta Cabo Blanco
     "id": "17_lugarTuristico",
     "name": "Reserva Nacional Absoluta Cabo Blanco",
     "location": "Puntarenas",
@@ -253,8 +253,8 @@ export default [
       "compras": "Arte y Artesanía Cabo Blanco",
       "alimentacion": "Restaurante Costa Salvaje"
     }
-},
-{//18_Parque Nacional Chirripó
+  },
+  {//18_Parque Nacional Chirripó
     "id": "18_lugarTuristico",
     "name": "Parque Nacional Chirripó",
     "location": "San José",
@@ -268,8 +268,8 @@ export default [
       "compras": "Arte y Artesanía Chirripó",
       "alimentacion": "Café Cima de la Montaña"
     }
-},
-{//19_Reserva Biológica Hitoy-Cerere
+  },
+  {//19_Reserva Biológica Hitoy-Cerere
     "id": "19_lugarTuristico",
     "name": "Reserva Biológica Hitoy-Cerere",
     "location": "Limón",
@@ -283,8 +283,8 @@ export default [
       "compras": "Artesanías del Caribe",
       "alimentacion": "Restaurante Selva Encantada"
     }
-},
-{//20_Parque Nacional Tapantí
+  },
+  {//20_Parque Nacional Tapantí
     "id": "20_lugarTuristico",
     "name": "Parque Nacional Tapantí",
     "location": "Cartago",
@@ -298,8 +298,8 @@ export default [
       "compras": "Arte y Artesanía Cartago",
       "alimentacion": "Café Vista a la Cascada"
     }
-},
-{//21_Parque Nacional Volcán Tenorio
+  },
+  {//21_Parque Nacional Volcán Tenorio
     "id": "21_lugarTuristico",
     "name": "Parque Nacional Volcán Tenorio",
     "location": "Guanacaste",
@@ -313,8 +313,8 @@ export default [
       "compras": "Artesanías Guanacaste",
       "alimentacion": "Restaurante Celestial"
     }
-},
-{//22_Parque Nacional Isla del Coco
+  },
+  {//22_Parque Nacional Isla del Coco
     "id": "22_lugarTuristico",
     "name": "Parque Nacional Isla del Coco",
     "location": "Puntarenas",
@@ -328,35 +328,35 @@ export default [
       "compras": "Tienda de Buceo",
       "alimentacion": "Restaurante Océano Azul"
     }
-},
-{//23_Playa Tamarindo
-  "id": "23_lugarTuristico",
-  "name": "Playa Tamarindo",
-  "location": "Guanacaste",
-  "shortDescription": "Famosa playa con aguas cristalinas y vibrante vida nocturna.",
-  "description": "Tamarindo es un icónico destino de playa conocido por sus aguas cristalinas, olas ideales para el surf y su animada vida nocturna, esta ubicada en la inolvidable costa vacacional de Guanacaste. Disfruta de días soleados en la playa, practica deportes acuáticos emocionantes y sumérgete en la atmósfera relajada y divertida de Tamarindo. Con una variedad de restaurantes y bares, este destino tiene algo para todos los gustos.Al caer la noche, Tamarindo se transforma en un escenario de fiesta y diversión. Disfruta de una amplia variedad de discotecas con Ritmos latinos, música en vivo y experiencias inolvidables.",
-  "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/23_lugarTuristico.jpg",
-  "tipoTurismo": "turismo de playa",
-  "gastoPromedio": 90,
-  "facts": {
-    "museo": "undefined",
-    "compras": "Tiendas Locales Tamarindo",
-    "alimentacion": "Restaurante Mar y Fiesta"
-  }
-},
-{//24_Parque Nacional Piedras Blancas
-  "id": "24_lugarTuristico",
-  "name": "Parque Nacional Piedras Blancas",
-  "location": "Puntarenas",
-  "shortDescription": "Selva virgen y cascadas impresionantes en la Península de Osa.",
-  "description": "Piedras Blancas es un tesoro natural en la Península de Osa, con selva virgen, ríos cristalinos y cascadas impresionantes. Explora senderos que te llevan a la riqueza biológica de la región, hogar de jaguares sigilosos, monos traviesos y aves multicolores que te sorprenderán con sus cantos melodiosos. Déjate llevar por la magia de la naturaleza y disfruta de un encuentro inolvidable con la fauna y flora de Costa Rica.Este parque nacional ofrece una experiencia inmersiva en la naturaleza virgen de Costa Rica. Déjate envolver por el sonido del agua cristalina, la brisa fresca y el canto de las aves.",
-  "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/24_lugarTuristico.jpg",
-  "tipoTurismo": "turismo de aventura",
-  "gastoPromedio": 100,
-  "facts": {
-    "museo": "undefined",
-    "compras": "Artesanías Osa Peninsula",
-    "alimentacion": "Restaurante Selva Fresca"
-  }
-},
+  },
+  {//23_Playa Tamarindo
+    "id": "23_lugarTuristico",
+    "name": "Playa Tamarindo",
+    "location": "Guanacaste",
+    "shortDescription": "Famosa playa con aguas cristalinas y vibrante vida nocturna.",
+    "description": "Tamarindo es un icónico destino de playa conocido por sus aguas cristalinas, olas ideales para el surf y su animada vida nocturna, esta ubicada en la inolvidable costa vacacional de Guanacaste. Disfruta de días soleados en la playa, practica deportes acuáticos emocionantes y sumérgete en la atmósfera relajada y divertida de Tamarindo. Con una variedad de restaurantes y bares, este destino tiene algo para todos los gustos.Al caer la noche, Tamarindo se transforma en un escenario de fiesta y diversión. Disfruta de una amplia variedad de discotecas con Ritmos latinos, música en vivo y experiencias inolvidables.",
+    "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/23_lugarTuristico.jpg",
+    "tipoTurismo": "turismo de playa",
+    "gastoPromedio": 90,
+    "facts": {
+      "museo": "undefined",
+      "compras": "Tiendas Locales Tamarindo",
+      "alimentacion": "Restaurante Mar y Fiesta"
+    }
+  },
+  {//24_Parque Nacional Piedras Blancas
+    "id": "24_lugarTuristico",
+    "name": "Parque Nacional Piedras Blancas",
+    "location": "Puntarenas",
+    "shortDescription": "Selva virgen y cascadas impresionantes en la Península de Osa.",
+    "description": "Piedras Blancas es un tesoro natural en la Península de Osa, con selva virgen, ríos cristalinos y cascadas impresionantes. Explora senderos que te llevan a la riqueza biológica de la región, hogar de jaguares sigilosos, monos traviesos y aves multicolores que te sorprenderán con sus cantos melodiosos. Déjate llevar por la magia de la naturaleza y disfruta de un encuentro inolvidable con la fauna y flora de Costa Rica.Este parque nacional ofrece una experiencia inmersiva en la naturaleza virgen de Costa Rica. Déjate envolver por el sonido del agua cristalina, la brisa fresca y el canto de las aves.",
+    "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/24_lugarTuristico.jpg",
+    "tipoTurismo": "turismo de aventura",
+    "gastoPromedio": 100,
+    "facts": {
+      "museo": "undefined",
+      "compras": "Artesanías Osa Peninsula",
+      "alimentacion": "Restaurante Selva Fresca"
+    }
+  },
 ];

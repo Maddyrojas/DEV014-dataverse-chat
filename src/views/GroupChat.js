@@ -4,11 +4,11 @@ import { Footer } from "./../components/footer.js";
 //import { filterData } from '../lib/dataFunctions.js';
 
 export const GroupChat = () => {
-    const groupChat = document.createElement("div");
-    groupChat.classList.add("groupChatView");
-    groupChat.append(Header());
-    const contentGroupChat = document.createElement("div");
-    contentGroupChat.innerHTML = `
+  const groupChat = document.createElement("div");
+  groupChat.classList.add("groupChatView");
+  groupChat.append(Header());
+  const contentGroupChat = document.createElement("div");
+  contentGroupChat.innerHTML = `
     <p class="groupChatGreeting">¡Hola! Bienvenid@ a Costa Rica ¿En que podemos servirte?</p>
     <div class="image-guides-grid">
     <img src="" alt="01-puntaArenasGuide" id="iconPlaya" class="img-guides"/>
@@ -25,7 +25,7 @@ export const GroupChat = () => {
     <div id="cajaSalida"></div>
     <input type="text" id="cajaEntrada" placeholder="Escribe aquí">
     `//incluir todo lo demas
-    groupChat.append(contentGroupChat);
-    groupChat.append(Footer());
-    return groupChat;
+  groupChat.append(contentGroupChat);
+  groupChat.append(Footer());
+  return groupChat;
 }

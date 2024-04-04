@@ -61,7 +61,7 @@ export const Home = () => {
   content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
   renderComputeStats(newData);
   
-  btnApi.addEventListener('click', (event) => {
+  btnApi.addEventListener('click', () => {
     modal.style.display = "none";
     alert(textName.value+" Tu ApiKey es correcta \n\n\nBienvenida a Pura Vida Tours");
     textSearch.value=textName.value;
@@ -76,8 +76,8 @@ export const Home = () => {
     }
   });
 
-  closemodal.addEventListener('click', (event) => {
-      modal.style.display = "none";
+  closemodal.addEventListener('click', () => {
+    modal.style.display = "none";
   });
 
   filterProvincia.addEventListener('change', () => {

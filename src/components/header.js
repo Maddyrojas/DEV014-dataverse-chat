@@ -1,6 +1,6 @@
 export const Header = () => {
-    const header = document.createElement("header");
-    header.innerHTML = `   
+  const header = document.createElement("header");
+  header.innerHTML = `   
     <div class="top-page">
         <div class="nav-zone">
             <nav>
@@ -18,5 +18,5 @@ export const Header = () => {
         <button class="btn-header" name="btn-header">SABER MÁS</button>
     </div>
     `;
-    return header;
-  };
+  return header;
+};

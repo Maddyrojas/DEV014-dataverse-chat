@@ -1,6 +1,6 @@
 export const MainHome = () => {
-    const main = document.createElement("main");
-    main.innerHTML = `
+  const main = document.createElement("main");
+  main.innerHTML = `
         <div class="filter-zone" name="filter-zone">
             <div class="where-filter">
                 <label for="filter" >¿A donde ir? </label>
@@ -63,5 +63,5 @@ export const MainHome = () => {
             </div>
         </div>
     `;
-    return main;
-  };
+  return main;
+};

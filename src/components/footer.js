@@ -1,7 +1,7 @@
 export const Footer = () => {
-    const footer = document.createElement("footer");
-    //footer.classList.add();
-    footer.innerHTML = `
+  const footer = document.createElement("footer");
+  //footer.classList.add();
+  footer.innerHTML = `
     <div class="zone-infoot">
         <div class="infoot" id="infoot1">
             <h4>INFORMACION DE CONTACTO</h4>
@@ -26,5 +26,5 @@ export const Footer = () => {
         <p class="foot1">FAQ</p>
         <p class="foot2">Copyright © 2024 MaddyPao. All rights reserveds</p>
     </div>`;
-    return footer;
+  return footer;
 }
