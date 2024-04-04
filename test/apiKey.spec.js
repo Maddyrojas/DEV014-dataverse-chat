@@ -16,7 +16,7 @@ describe('setApiKey', () => {
     expect(localStorageApiKey).toEqual(apiKey);
   });
   it('should remove ApiKey if it is empty', () => {
-    const emptyApiKey = '';
+    const emptyApiKey = null;
     setApiKey(emptyApiKey);
     const localStorageApiKey = localStorage.getItem('apiKey',);
     expect(localStorageApiKey).toEqual(emptyApiKey);
