@@ -29,7 +29,7 @@ export const navigateTo = (pathname, props) => {
   renderView(pathname, props);//render the view with the pathname and object
 }
 
-export const onURLChange = (location) => {
+export const onURLChange = (location) => {//it is used to reload home page
   const pathname = location.pathname;
   renderView(ROUTES[pathname], queryStringToObject(location));
   // parse the location for the pathname and search params
