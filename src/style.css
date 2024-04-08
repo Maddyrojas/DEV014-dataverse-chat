@@ -36,12 +36,6 @@ body {
   padding: 0px;
 }
 
-.chat-zone{
-  width: 60vh;
-  height: 60%;
-  background-color: #86AFEC;
-}
-
 .aiInteractions {
   display: flex;
   flex-direction: row;
@@ -764,5 +758,19 @@ hr{
   }
   .divPrecio dt{
     align-items: center;
+  }
+
+  .chat-zone{
+    display: flex;
+    max-width: 800px;
+    min-width: 250px;
+    width: 100%;
+    max-height: 400px;
+    height: auto;
+    background-color: #86AFEC;
+  }
+  .enterResponse{
+    height: auto;
+    width: 60%;
   }
 }

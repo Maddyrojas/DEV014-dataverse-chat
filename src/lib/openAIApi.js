@@ -26,8 +26,8 @@ export const communicateWithOpenAI = async (messages, tour) => {
   });
   const messageReturn = await response.json();
   return messageReturn.choices[0].messages.content;
-  
-  // //catch (error) {
+
+  // catch(error){
   //   console.log(error);
   //   throw error("Error al comunicarse con OpenAI:", error);
   // }

@@ -18,7 +18,6 @@ const queryStringToObject = (queryString) => {
 }
 
 const renderView = (pathname, props = {}) => {
-  console.log(pathname);
   rootEl.innerHTML = "";// clear the root element
   rootEl.appendChild(ROUTES[pathname](props));// find the correct view in ROUTES for the pathname 
 }

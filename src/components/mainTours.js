@@ -19,6 +19,8 @@ export const MainChatTours = () => {
     <li></li>
   </ul>
   <div class="chat-zone" id="chat-zone">
+    <div class="enterResponse">
+    </div>
     <!-- aqui ingresan div crea los mensajes a travez del evento del boton -->
   </div>
   <div class="aiInteractions">
