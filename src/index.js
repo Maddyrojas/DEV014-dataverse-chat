@@ -8,7 +8,7 @@ const selectRoot = document.getElementById("root");
 const routes = {
   '/': Home,
   '/individualChat' : IndividualChat,
-  '/groupChat': GroupChat,
+  '/panel': GroupChat,
 };
 
 setRoutes(routes); // Assign the routes

@@ -18,20 +18,19 @@ const queryStringToObject = (queryString) => {
 }
 
 const renderView = (pathname, props = {}) => {
+  console.log(pathname);
   rootEl.innerHTML = "";// clear the root element
-  rootEl.appendChild(pathname(props)); // find the correct view in ROUTES for the pathname
+  rootEl.appendChild(ROUTES[pathname](props));// find the correct view in ROUTES for the pathname 
 }
 
 export const navigateTo = (pathname, props) => {
   const newUrlParams = new URLSearchParams(props);
-  const URLvisited = window.location.origin + pathname + '?' + newUrlParams;
-  window.history.pushState(props, "", URLvisited);//update window history with pushState
+  window.history.pushState(props, "", (window.location.origin + pathname + '?' + newUrlParams));//update window history with pushState
   renderView(pathname, props);//render the view with the pathname and object
 }
 
 export const onURLChange = (location) => {//it is used to reload home page
-  const pathname = location.pathname;
-  renderView(ROUTES[pathname], queryStringToObject(location));
+  renderView(location.pathname, queryStringToObject(location));
   // parse the location for the pathname and search params
   // convert the search params to an object
   // render the view with the pathname and object

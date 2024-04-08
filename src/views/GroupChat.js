@@ -11,12 +11,12 @@ export const GroupChat = () => {
   contentGroupChat.innerHTML = `
     <p class="groupChatGreeting">¡Hola! Bienvenid@ a Costa Rica ¿En que podemos servirte?</p>
     <div class="image-guides-grid">
-    <img src="" alt="01-puntaArenasGuide" id="iconPlaya" class="img-guides"/>
-    <img src="" alt="02-sanJoseGuide" id="iconPlaya" class="img-guides"/>
-    <img src="" alt="03-alajuelaGuide" id="iconPlaya" class="img-guides"/>
-    <img src="" alt="04-cartagoGuide" id="iconPlaya" class="img-guides"/>
-    <img src="" alt="05-guanacasteGuide" id="iconPlaya" class="img-guides"/>
-    <img src="" alt="06-limonGuide" id="iconPlaya" class="img-guides"/>
+      <img src="" alt="01-puntaArenasGuide" id="iconPlaya" class="img-guides"/>
+      <img src="" alt="02-sanJoseGuide" id="iconPlaya" class="img-guides"/>
+      <img src="" alt="03-alajuelaGuide" id="iconPlaya" class="img-guides"/>
+      <img src="" alt="04-cartagoGuide" id="iconPlaya" class="img-guides"/>
+      <img src="" alt="05-guanacasteGuide" id="iconPlaya" class="img-guides"/>
+      <img src="" alt="06-limonGuide" id="iconPlaya" class="img-guides"/>
     </div>
     <input type="text" placeholder="Toma el Sol">
     <input type="text" placeholder="Camina por senderos">

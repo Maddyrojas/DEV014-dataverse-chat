@@ -3,10 +3,12 @@ import { Footer } from "../components/footer.js";
 import { MainHome } from "../components/mainHome.js";
 import data from "../data/dataset.js";
 import { filterData, sortData, computeStats } from '../lib/dataFunction.js';
+import { navigateTo } from "../router.js";
 
 const mainHomeElement = MainHome();
 const headerElement = Header();
 const footerElement = Footer();
+
 
 function renderComputeStats(data) {
   const arrCompute = computeStats(data);
@@ -16,8 +18,14 @@ function renderComputeStats(data) {
 }
 
 function renderItems(dataset) {
+  const content = mainHomeElement.querySelector('#root');
   const ul = document.createElement('ul');
   ul.setAttribute('name', 'ul-root');
+  
+  if (content.hasChildNodes()) { // If it has child
+    content.innerHTML = '';
+  }
+  
   dataset.forEach(function (element) {
     const list = document.createElement('li');
     list.setAttribute('itemscope', '');
@@ -30,19 +38,43 @@ function renderItems(dataset) {
         <div class="divStars"> <img src="https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/01c79ef9f70a89e36ef48ce985bc36e527598bef/Imagenes%20Dataverse/05-icon-stars.svg" alt="Star 1">  <img src="https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/01c79ef9f70a89e36ef48ce985bc36e527598bef/Imagenes%20Dataverse/05-icon-stars.svg" alt="Star 2">  <img src="https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/01c79ef9f70a89e36ef48ce985bc36e527598bef/Imagenes%20Dataverse/05-icon-stars.svg" alt="Star 3">  <img src="https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/01c79ef9f70a89e36ef48ce985bc36e527598bef/Imagenes%20Dataverse/05-icon-stars.svg" alt="Star 4"></div>
         <div class="divPrecio"><dt itemprop="gastoPromedio">$${element.gastoPromedio}<span>gasto promedio diario</span></dt></div>
         <div class="divDescription"><dt></dt><dd itemprop="shortDescription">${element.shortDescription}</dd></div>
-        <button type="button" id="bntReadMore">CHATEA CONMIGO</button> 
-        <button type="button" id="bntProvincia">${element.location}</button>
+        <button class="btnChat">CHATEA CONMIGO</button> 
+        <button id="bntProvincia">${element.location}</button>
       </dl>
       `;
     ul.appendChild(list);
+    const btnChat = list.querySelector('button[class="btnChat"]');
+    btnChat.addEventListener('click', () => {
+      navigateTo('/individualChat', { name: element.name })
+    });
   });
-  return ul;
+  content.appendChild(ul);
+  return content;
 }
+
+// function setupMutationObserver() {
+//   const ul = mainHomeElement.querySelector('#root');// Selecciona el nodo objetivo
+//   const config = { childList: true, subtree: true, };// Observa cambios en los nodos hijos
+//   const observer = new MutationObserver((mutationsList, observer) => {
+//     for (const mutation of mutationsList) {
+//       if (mutation.type === 'subtree') {
+//         const tours = mainHomeElement.querySelectorAll('button[class="bntChat"]');
+//         tours.forEach( tour => {
+//           tour.addEventListener('click', () =>{
+//             console.log(tour.id);
+//             //navigateTo('/individualChat', );
+//           });
+//         });
+//       }
+//     }
+//   });
+//   observer.observe(ul, config);
+// }
 
 export const Home = () => {
   const home = document.createElement("div");
   let newData = data;
-  const content = mainHomeElement.querySelector('#root');
+  //---------------SELECTOR EVENT-------------------//
   const filterProvincia = mainHomeElement.querySelector('select[name="filtrarProvincia"]');
   const sortOption = mainHomeElement.querySelector('select[name="ordenar"]');
   const sortAsc = mainHomeElement.querySelector('input[value="asc"]');
@@ -51,18 +83,21 @@ export const Home = () => {
   const btnHeader = headerElement.querySelector('button[name="btn-header"]');
   const textSearch = headerElement.querySelector('#search-header');
   const filterZone = mainHomeElement.querySelector('div[name="filter-zone"]');
+
+  //---------------SELECTOR MODAL-------------------//
   const modal = document.getElementById("modal");
   const closemodal = document.getElementById("close-modal");
   const btnApi = document.querySelector('button[type="submit"]');
-  const chexApi = document.getElementById('miCheckbox');
-  const textApi = document.getElementById('apikey');
-  const textName = document.getElementById('name');
+  const chexApi = document.getElementById("miCheckbox");
+  const textApi = document.getElementById("apikey");
+  const textName = document.getElementById("name");
   
+  //------------INITIAL CHARGE------------//
   modal.style.display = "block";
-  
-  content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
+  renderItems(sortData(newData, sortOption.value, sortAsc.value));
   renderComputeStats(newData);
   
+  //------------EVENT MODAL------------//
   btnApi.addEventListener('click', () => {
     modal.style.display = "none";
     alert(textName.value+" Tu ApiKey es correcta \n\n\nBienvenida a Pura Vida Tours");
@@ -71,7 +106,6 @@ export const Home = () => {
 
   chexApi.addEventListener('change', () => {
     if(chexApi.checked) {
-      console.log(textApi);
       textApi.value="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";
     } else {
       textApi.value="";
@@ -82,61 +116,59 @@ export const Home = () => {
     modal.style.display = "none";
   });
 
+  //------------EVENT HEADER------------//
+  btnHeader.addEventListener('click', () => {
+    filterZone.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  //------------EVENT MAIN------------//
   filterProvincia.addEventListener('change', () => {
-    mainHomeElement.querySelector('ul[name="ul-root"]').remove();
     if (filterProvincia.value === 'All Options') {
       newData = data;
       if (sortAsc.checked) {
-        content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
+        renderItems(sortData(newData, sortOption.value, sortAsc.value));
       } else {
-        content.appendChild(renderItems(sortData(newData, sortOption.value, sortDesc.value)));
+        renderItems(sortData(newData, sortOption.value, sortDesc.value));
       }
       renderComputeStats(newData);
     } else { // si es por filtro de location
       newData = filterData(data, 'location', filterProvincia.value); // llama el metodo filtrar y lo asigna a dataOriginFilter
       if (sortAsc.checked) {
-        content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value))); // filtrar y ordenar por lo seleccionado
+        renderItems(sortData(newData, sortOption.value, sortAsc.value)); // filtrar y ordenar por lo seleccionado
       } else {
-        content.appendChild(renderItems(sortData(newData, sortOption.value, sortDesc.value)));
+        renderItems(sortData(newData, sortOption.value, sortDesc.value));
       }
       renderComputeStats(newData);
     }
   });
 
   sortOption.addEventListener('change', () => {
-    mainHomeElement.querySelector('ul[name="ul-root"]').remove();
     if (sortAsc.checked) {
-      content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
+      renderItems(sortData(newData, sortOption.value, sortAsc.value));
     }
     if (sortDesc.checked) {
-      content.appendChild(renderItems(sortData(newData, sortOption.value, sortDesc.value)));
+      renderItems(sortData(newData, sortOption.value, sortDesc.value));
     }
   });
 
   sortAsc.addEventListener('click', (event) => {
-    mainHomeElement.querySelector('ul[name="ul-root"]').remove();
-    content.appendChild(renderItems(sortData(newData, sortOption.value, event.target.value)));
+    renderItems(sortData(newData, sortOption.value, event.target.value));
   });
 
   sortDesc.addEventListener('click', (event) => {
-    mainHomeElement.querySelector('ul[name="ul-root"]').remove();
-    content.appendChild(renderItems(sortData(newData, sortOption.value, event.target.value)));
+    renderItems(sortData(newData, sortOption.value, event.target.value));
   });
 
   btnLimpiar.addEventListener('click', () => {
-    mainHomeElement.querySelector('ul[name="ul-root"]').remove();
     filterProvincia.selectedIndex = 0;
     sortOption.selectedIndex = 0;
     sortAsc.checked = true;
     newData = data;
-    content.appendChild(renderItems(sortData(newData, sortOption.value, sortAsc.value)));
+    renderItems(sortData(newData, sortOption.value, sortAsc.value));
     renderComputeStats(newData);
   });
 
-  btnHeader.addEventListener('click', () => {
-    filterZone.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-  
+  //------------EVENT FOOTER------------//
   footerElement.querySelector('button[name="btn-subcrip"]').addEventListener('click', () => {
     filterZone.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
