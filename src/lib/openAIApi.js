@@ -1,6 +1,6 @@
 //import { getApiKey } from "./apiKey";
 //podemos importar el nombre del usuario
-const key = "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";
+const key = "ApiKey";
 
 export const communicateWithOpenAI = async (messages, tour) => {
   try{
