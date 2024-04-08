@@ -9,13 +9,25 @@ const mainChatElement = MainChatTours();
 const headerElement = Header();
 const footerElement = Footer();
 
-function enterMessage(msj){
+function enterMessage(msj) {
   console.log(msj);
 }
 
-function enterResponse(msj){
+function enterResponse(msj) {
   console.log(msj);
 }
+
+export function autoExpand(element) {
+  element.style.height = 'auto';
+  element.style.height = (element.scrollHeight) + 'px';
+  if (element.scrollHeight > 200) {
+    element.style.overflowY = 'scroll'; // Agregar barra de desplazamiento
+    element.style.height = '200px'; // Establecer la altura máxima
+  } else {
+    element.style.overflowY = 'hidden'; // Ocultar la barra de desplazamiento si no se necesita
+  }
+}
+
 export const IndividualChat = (objTour) => {
   const individualChat = document.createElement("div");
 
@@ -26,7 +38,7 @@ export const IndividualChat = (objTour) => {
 
   const infoTour = data.find(tour => tour.name === objTour.name);
 
-  divInfoLaptop.querySelector("h1").textContent=infoTour.name;
+  divInfoLaptop.querySelector("h1").textContent = infoTour.name;
   divInfoLaptop.querySelector("img").src = infoTour.imageUrl;
 
 

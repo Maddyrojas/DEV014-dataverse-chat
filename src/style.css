@@ -25,6 +25,10 @@ button {
   background-color: #F56960;
 }
 
+main{
+  width: auto;
+}
+
 /* body*/
 body {
   background-color: #fff;
@@ -32,8 +36,33 @@ body {
   padding: 0px;
 }
 
-btn-sendMsj {
-  image: URL(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/header.jpg);
+.chat-zone{
+  width: 60vh;
+  height: 60%;
+  background-color: #86AFEC;
+}
+
+.aiInteractions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.aiInteractions textarea {
+  width: 80%;
+  resize: vertical;
+  height: 20%;
+  align-items: end;
+}
+.btn-sendMsj {
+  background-color:#ffffff;
+  width: 3%;
+  height: 12%;
+  border: none;
+  margin-left: 0.5%;
+}
+.btn-sendMsj img {
+  width: 100%;
+  height: 100%;
 }
 
 .modal {
