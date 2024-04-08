@@ -40,6 +40,5 @@ export const IndividualChat = (objTour) => {
 
 
   individualChat.append(headerElement, mainChatElement, footerElement);
-  console.log(name);
   return individualChat;
 }

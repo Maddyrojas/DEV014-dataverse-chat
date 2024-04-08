@@ -32,6 +32,10 @@ body {
   padding: 0px;
 }
 
+btn-sendMsj {
+  image: URL(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/header.jpg);
+}
+
 .modal {
   display: none;
   position: fixed;
