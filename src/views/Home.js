@@ -40,14 +40,18 @@ function renderItems(dataset) {
         <div class="divPrecio"><dt itemprop="gastoPromedio">$${element.gastoPromedio}<span>gasto promedio diario</span></dt></div>
         <div class="divDescription"><dt></dt><dd itemprop="shortDescription">${element.shortDescription}</dd></div>
         <button class="btnChat">CHATEA CONMIGO</button> 
-        <button id="bntProvincia">${element.location}</button>
+        <button id="btnInfo">SABER MAS</button>
       </dl>
       `;
     ul.appendChild(list);
     const btnChat = list.querySelector('button[class="btnChat"]');
+    const btnInfo = list.querySelector('button[id="btnInfo"]');
     btnChat.addEventListener('click', () => {
-      navigateTo('/individualChat', { name: element.name })
+      navigateTo('/chat', { name: element.name })
     });
+    btnInfo.addEventListener('click', () => {
+      navigateTo('/tour', { name: element.name })
+    });   
   });
   content.appendChild(ul);
   return content;

@@ -310,7 +310,7 @@ dd
   font-family: "Hind Siliguri", sans-serif;
   font-weight: 400;
 }
-#bntProvincia {
+#btnInfo {
   display: flex;
   float: right;
   float: inline-end;
@@ -509,7 +509,7 @@ hr{
     padding-left: 18px;
     padding-top: 1vh;
   }
-  #bntProvincia {
+  #btnInfo {
     height: 5.5vh;
     width: 40%;
     padding-left: 15%;
@@ -623,7 +623,7 @@ hr{
     height: 14.85vh;
     padding-left: 16px;
   }
-  #bntProvincia {
+  #btnInfo {
     height: 5.6vh;
     width: 23vh;
     margin-right: -34px;
@@ -696,7 +696,7 @@ hr{
     height: 13.3vh;
     padding-left: 16px;
   }
-  #bntProvincia {
+  #btnInfo {
     height: 5.5vh;
     width: 24%;
     margin-right: -32px;

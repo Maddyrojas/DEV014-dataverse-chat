@@ -2,12 +2,14 @@
 import { Home } from './views/Home.js';
 import { IndividualChat } from './views/IndividualChat.js';
 import { GroupChat } from './views/GroupChat.js';
+import { TourLayout } from './views/TourLayaout.js';
 import { setRootEl, setRoutes, onURLChange } from './router.js';
 
 const selectRoot = document.getElementById("root");
 const routes = {
   '/': Home,
-  '/individualChat' : IndividualChat,
+  '/tour' : TourLayout,
+  '/chat' : IndividualChat,
   '/panel': GroupChat,
 };
 
