@@ -24,16 +24,16 @@ function enterResponse(msj) {
   console.log(msj);
 }
 
-export function autoExpand(element) {
-  element.style.height = 'auto';
-  element.style.height = (element.scrollHeight) + 'px';
-  if (element.scrollHeight > 300) {
-    element.style.overflowY = 'scroll'; // Agregar barra de desplazamiento
-    element.style.height = '300px'; // Establecer la altura máxima
-  } else {
-    element.style.overflowY = 'hidden'; // Ocultar la barra de desplazamiento si no se necesita
-  }
-}
+// function autoExpand(element) {
+//   element.style.height = 'auto';
+//   element.style.height = (element.scrollHeight) + 'px';
+//   if (element.scrollHeight > 300) {
+//     element.style.overflowY = 'scroll'; // Agregar barra de desplazamiento
+//     element.style.height = '300px'; // Establecer la altura máxima
+//   } else {
+//     element.style.overflowY = 'hidden'; // Ocultar la barra de desplazamiento si no se necesita
+//   }
+// }
 
 export const IndividualChat = (objName) => {
   const individualChat = document.createElement("div"); //div all page
@@ -49,7 +49,7 @@ export const IndividualChat = (objName) => {
   divInfoLaptop.querySelector("img").src = infoTour.imageUrl;
 
   divFirstMsj.classList.add("enterResponse");
-  divFirstMsj.innerHTML=`<strong>System:</strong> Hola yo soy ${infoTour.name}, te invito a conocerme por medio de tus consultas, por favor no te guardes ninguna duda...`;
+  divFirstMsj.innerHTML = `<strong>System:</strong> Hola yo soy ${infoTour.name}, te invito a conocerme por medio de tus consultas, por favor no te guardes ninguna duda...`;
   divChatZone.appendChild(divFirstMsj);
 
   //----------EVENT----------//
@@ -58,9 +58,9 @@ export const IndividualChat = (objName) => {
     textArea.value = '';
     enterMessage(userPrompt);
     enterResponse(communicateWithOpenAI(infoTour, userPrompt));
-  });
+});
 
 
-  individualChat.append(headerElement, mainChatElement, footerElement);
-  return individualChat;
+individualChat.append(headerElement, mainChatElement, footerElement);
+return individualChat;
 }

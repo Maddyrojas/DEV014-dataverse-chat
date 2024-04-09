@@ -24,7 +24,7 @@ export const MainChatTours = () => {
     <!-- aqui ingresan div crea los mensajes a travez del evento del boton -->
   </div>
   <div class="aiInteractions">
-    <textarea id="userTextArea" oninput="autoExpand(this)"></textarea>
+    <textarea id="userTextArea"></textarea>
     <button class="btn-sendMsj">
       <img src="https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/2997f934b10d9d3009c6a8722abcaee1854f74a9/imgs/%F0%9F%A6%86%20icon%20_navigation_.svg" alt="bntIconArrow">
     </button>
