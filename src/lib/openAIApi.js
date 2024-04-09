@@ -1,41 +1,42 @@
 //import { getApiKey } from "./apiKey";
 //podemos importar el nombre del usuario
-const key = "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";
-export const communicateWithOpenAI = (messages, tour) => {
+const key = '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';
+export const communicateWithOpenAI = (tour, prompt) => {
+  console.log(prompt, tour.name);
   const configOpenAI = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + key,
+      Authorization: `Bearer ${key}`,
     },
     body: JSON.stringify({
-      model: 'gpt-3.5-turbo',
+      model: 'gpt-3.5-turbo-1106',
       messages: [
         {
-          role: "system", content: `You are: an expert touristic guide from ${tour.name} de Costa Rica, you are living near to the touristic place, you love to be a touristic guide and you define yourself as kind and relax`,
+          role: "system",
+          content: `You are: an expert touristic guide from ${tour.name} de Costa Rica, you are living near to the touristic place, you love to be a touristic guide and you define yourself as kind and relax`,
         },
         {
           role: "user",
-          content: messages,
+          content: prompt,
         },
       ],
     }),
   };
-  return new Promise((resolve, reject) => {
-      fetch('https://api.openai.com/v1/chat/completions', configOpenAI)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      }).then(data => {
-        resolve(data.choices[0].messages.content);
-      }).catch(error => {
-        reject('It is not communication with OpenAI' + error);
-      });
+  return fetch('https://api.openai.com/v1/chat/completions', configOpenAI)
+    .then(response => {
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    }).then(data => {
+      console.log('Data received from OpenAI:', data);
+      return data.choices[0].message.content;
+    }).catch(error => {
+      throw error
     });
-    console.log(Promise);
-  }
+};
 
 
 // export const communicateWithOpenAI = async (messages, tour) => {

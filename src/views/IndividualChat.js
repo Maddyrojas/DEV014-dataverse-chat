@@ -20,10 +20,6 @@ function enterMessage(msj) {
   console.log(msj);
 }
 
-function enterResponse(msj) {
-  console.log(msj);
-}
-
 // function autoExpand(element) {
 //   element.style.height = 'auto';
 //   element.style.height = (element.scrollHeight) + 'px';
@@ -57,10 +53,18 @@ export const IndividualChat = (objName) => {
     const userPrompt = textArea.value;
     textArea.value = '';
     enterMessage(userPrompt);
-    enterResponse(communicateWithOpenAI(infoTour, userPrompt));
-});
+    communicateWithOpenAI(infoTour, userPrompt)
+      .then(response => {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add("enterMessage");
+        messageElement.innerHTML = `<strong>SYSTEM:</strong> ${response}`;
+        divChatZone.appendChild(messageElement);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      })
+  });
 
-
-individualChat.append(headerElement, mainChatElement, footerElement);
-return individualChat;
+  individualChat.append(headerElement, mainChatElement, footerElement);
+  return individualChat;
 }
