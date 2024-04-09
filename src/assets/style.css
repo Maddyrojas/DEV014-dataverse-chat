@@ -116,7 +116,6 @@ filter-zone
 sort-zone
 */
 header {
-  background-image: url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/header.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -452,7 +451,6 @@ hr{
   }
   header {
     height: 55vh;
-    background-image: url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/phone.jpg);
     background-position: initial;
     background-size: contain;
   }
@@ -589,7 +587,6 @@ hr{
 @media (min-width: 785px) and (max-width: 1000px) { /*tablet*/
   header {
     height: 75vh;
-    background-image: url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/tablet.jpg);
     background-position: initial;
     background-size: contain;
   }

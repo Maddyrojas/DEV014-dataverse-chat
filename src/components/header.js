@@ -1,5 +1,6 @@
 export const Header = () => {
   const header = document.createElement("header");
+  header.style.backgroundImage = "url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/header.jpg)";
   header.innerHTML = `   
     <div class="top-page">
         <div class="nav-zone">

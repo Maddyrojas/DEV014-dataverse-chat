@@ -1,7 +1,8 @@
 export const MainChatTours = () => {
   const individualMain = document.createElement("main");
   individualMain.innerHTML = `
-  <img src="iconlines.png" alt="Icono">
+  <div class= "mainDiv">
+  <img id=dotsIcon src="https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/876f39a5281c0d6954491d1754a1cb70adb6b4f1/imgs/menu-dots_3917763.svg" alt="dotsIcon">
   <div id="infOnPC">
     <img src="" alt="Image of the place">
     <h1 class="placeName"></h1>
@@ -33,6 +34,7 @@ export const MainChatTours = () => {
     <div class="modal-IndividualChat" id="infOnMobile">
       <!-- definir que queremos que se muestre -->
     </div>
+  </div>
   </div>
   `;
   return individualMain;

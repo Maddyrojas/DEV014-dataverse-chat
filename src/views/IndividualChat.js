@@ -1,13 +1,12 @@
-
-import { Header } from "../components/header.js";
 import { Footer } from "../components/footer.js";
 import { MainChatTours } from "../components/mainTours.js";
 import data from '../data/dataset.js';
 import { communicateWithOpenAI } from "../lib/openAIApi.js";
+import { NavIndividualChat } from "../components/navindividualchat.js";
 
 const mainChatElement = MainChatTours();
-const headerElement = Header();
 const footerElement = Footer();
+const navindividualchatElement = NavIndividualChat();
 
 const divChatZone = mainChatElement.querySelector('div[id="chat-zone"]');
 
@@ -54,6 +53,6 @@ export const IndividualChat = (objName) => {
       })
   });
 
-  individualChat.append(headerElement, mainChatElement, footerElement);
+  individualChat.append(navindividualchatElement, mainChatElement, footerElement);
   return individualChat;
 }
