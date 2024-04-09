@@ -4,7 +4,7 @@ import { MainHome } from "../components/mainHome.js";
 import data from "../data/dataset.js";
 import { filterData, sortData, computeStats } from '../lib/dataFunction.js';
 import { navigateTo } from "../router.js";
-
+import { setApiKey } from "../lib/apiKey.js"
 
 const mainHomeElement = MainHome();
 const headerElement = Header();
@@ -83,8 +83,12 @@ export const Home = () => {
   //------------EVENT MODAL------------//
   btnApi.addEventListener('click', () => {
     modal.style.display = "none";
-    alert(textName.value+" Tu ApiKey es correcta \n\n\nBienvenida a Pura Vida Tours");
-    textSearch.value=textName.value;
+    console.log(textApi.value);
+    setApiKey(textApi.value);
+    if (textApi.value) {
+      alert(textName.value+" Tu ApiKey es correcta \n\n\nBienvenida a Pura Vida Tours");
+    }
+    textSearch.value=textName.value;// name
   });
 
   chexApi.addEventListener('change', () => {
