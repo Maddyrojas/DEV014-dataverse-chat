@@ -5,6 +5,7 @@ import data from "../data/dataset.js";
 import { filterData, sortData, computeStats } from '../lib/dataFunction.js';
 import { navigateTo } from "../router.js";
 
+
 const mainHomeElement = MainHome();
 const headerElement = Header();
 const footerElement = Footer();
@@ -52,24 +53,6 @@ function renderItems(dataset) {
   return content;
 }
 
-// function setupMutationObserver() {
-//   const ul = mainHomeElement.querySelector('#root');// Selecciona el nodo objetivo
-//   const config = { childList: true, subtree: true, };// Observa cambios en los nodos hijos
-//   const observer = new MutationObserver((mutationsList, observer) => {
-//     for (const mutation of mutationsList) {
-//       if (mutation.type === 'subtree') {
-//         const tours = mainHomeElement.querySelectorAll('button[class="bntChat"]');
-//         tours.forEach( tour => {
-//           tour.addEventListener('click', () =>{
-//             console.log(tour.id);
-//             //navigateTo('/individualChat', );
-//           });
-//         });
-//       }
-//     }
-//   });
-//   observer.observe(ul, config);
-// }
 
 export const Home = () => {
   const home = document.createElement("div");

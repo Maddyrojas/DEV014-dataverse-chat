@@ -20,17 +20,6 @@ function enterMessage(msj) {
   console.log(msj);
 }
 
-// function autoExpand(element) {
-//   element.style.height = 'auto';
-//   element.style.height = (element.scrollHeight) + 'px';
-//   if (element.scrollHeight > 300) {
-//     element.style.overflowY = 'scroll'; // Agregar barra de desplazamiento
-//     element.style.height = '300px'; // Establecer la altura máxima
-//   } else {
-//     element.style.overflowY = 'hidden'; // Ocultar la barra de desplazamiento si no se necesita
-//   }
-// }
-
 export const IndividualChat = (objName) => {
   const individualChat = document.createElement("div"); //div all page
   const divFirstMsj = document.createElement('div');
