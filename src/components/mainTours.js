@@ -14,9 +14,9 @@ export const MainChatTours = () => {
     </div>
   </div>
   <ul class="cloud-zone">
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Diversión</li>
+    <li>Aventuras</li>
+    <li>Cultura</li>
   </ul>
   <div class="chat-zone" id="chat-zone">
     <div class="enterResponse">

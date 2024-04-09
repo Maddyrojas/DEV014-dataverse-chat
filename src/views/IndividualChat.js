@@ -27,31 +27,28 @@ function enterResponse(msj) {
 export function autoExpand(element) {
   element.style.height = 'auto';
   element.style.height = (element.scrollHeight) + 'px';
-  if (element.scrollHeight > 200) {
+  if (element.scrollHeight > 300) {
     element.style.overflowY = 'scroll'; // Agregar barra de desplazamiento
-    element.style.height = '200px'; // Establecer la altura máxima
+    element.style.height = '300px'; // Establecer la altura máxima
   } else {
     element.style.overflowY = 'hidden'; // Ocultar la barra de desplazamiento si no se necesita
   }
 }
 
-export const IndividualChat = (objName) => {
-  const individualChat = document.createElement("div"); //div all page
-  const divFirstMsj = document.createElement('div');
+export const IndividualChat = (objTour) => {
+  const individualChat = document.createElement("div");
 
   const divInfoLaptop = mainChatElement.querySelector('div[id="infOnPC"]');
   const btnSendMsj = mainChatElement.querySelector('button[class="btn-sendMsj"]');
   const textArea = mainChatElement.querySelector("textArea");
 
-  const infoTour = data.find(tour => tour.name === objName.name);
+
+  const infoTour = data.find(tour => tour.name === objTour.name);
 
   divInfoLaptop.querySelector("h1").textContent = infoTour.name;
   divInfoLaptop.querySelector("img").src = infoTour.imageUrl;
 
-  divFirstMsj.classList.add("enterResponse");
-  divFirstMsj.innerHTML=`<strong>System:</strong> Hola yo soy ${infoTour.name}, te invito a conocerme por medio de tus consultas, por favor no te guardes ninguna duda...`;
-  divChatZone.appendChild(divFirstMsj);
-  
+
   //----------EVENT----------//
   btnSendMsj.addEventListener('click', () => {
     const userPrompt = textArea.value;
