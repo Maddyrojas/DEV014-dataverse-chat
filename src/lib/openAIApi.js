@@ -21,6 +21,7 @@ export const communicateWithOpenAI = (tour, prompt) => {
           content: prompt,
         },
       ],
+      temperature: 0.3,
     }),
   };
   return fetch('https://api.openai.com/v1/chat/completions', configOpenAI)
