@@ -108,7 +108,25 @@ body {
   margin-left: 220px;
   height: 40px;
 }
-
+.mainDescriptionx{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(245, 105, 96, 0.7);
+}
+.divDescriptionx{
+  margin-top: 10vh;
+  padding: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  background-color: white;
+}
+.h1Descriptionx, .h3Descriptionx, .imgDescriptionx{
+  margin: 10vh;
+}
 /* 
 top-page
 header
