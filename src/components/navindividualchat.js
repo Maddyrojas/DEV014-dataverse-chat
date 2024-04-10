@@ -1,7 +1,7 @@
 export const NavIndividualChat = () => {
-    const navIndvChat = document.createElement("div");
-    navIndvChat.classList.add("chat-header");
-    navIndvChat.innerHTML = `
+  const navIndvChat = document.createElement("div");
+  navIndvChat.classList.add("chat-header");
+  navIndvChat.innerHTML = `
     <nav class = nav-mobile style="background-image: url('https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/header.jpg');" >
         <ul>
         <li class="chat-nav"><a href="">SALIR</a></li>
@@ -9,5 +9,5 @@ export const NavIndividualChat = () => {
     </ul>
     </nav>
     `;
-    return navIndvChat;
+  return navIndvChat;
 };
