@@ -22,7 +22,7 @@ function enterMessage(msj) {
 
 export const IndividualChat = (objName) => {
   const individualChat = document.createElement("div"); //div all page
-  const divFirstMsj = document.createElement('div');
+  //const divFirstMsj = document.createElement('div');
 
   const divInfoLaptop = mainChatElement.querySelector('div[id="infOnPC"]');
   const btnSendMsj = mainChatElement.querySelector('button[class="btn-sendMsj"]');
@@ -33,9 +33,9 @@ export const IndividualChat = (objName) => {
   divInfoLaptop.querySelector("h1").textContent = infoTour.name;
   divInfoLaptop.querySelector("img").src = infoTour.imageUrl;
 
-  divFirstMsj.classList.add("enterResponse");
-  divFirstMsj.innerHTML = `<strong>System:</strong> Hola yo soy ${infoTour.name}, te invito a conocerme por medio de tus consultas, por favor no te guardes ninguna duda...`;
-  divChatZone.appendChild(divFirstMsj);
+  // divFirstMsj.classList.add("enterResponse");
+  // divFirstMsj.innerHTML = `<strong>System:</strong> Hola yo soy ${infoTour.name}, te invito a conocerme por medio de tus consultas, por favor no te guardes ninguna duda...`;
+  // divChatZone.appendChild(divFirstMsj);
 
   //----------EVENT----------//
   btnSendMsj.addEventListener('click', () => {
