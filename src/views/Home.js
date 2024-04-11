@@ -98,7 +98,7 @@ export const Home = () => {
 
   chexApi.addEventListener('change', () => {
     if(chexApi.checked) {
-      textApi.value="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";
+      textApi.value="r289RVyc1xkxrxrhtPgRT3BlbkFJohL38inFU392VV27zXuW";
     } else {
       textApi.value="";
     }

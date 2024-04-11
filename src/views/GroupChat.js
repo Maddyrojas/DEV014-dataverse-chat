@@ -10,7 +10,7 @@ const divChatZone = main.querySelector('div[id="chat-zone"]');
 export const GroupChat = () => {
   const btnSendMsj = main.querySelector('button[class="btn-sendMsj"]');
   const textArea = main.querySelector("textArea");
-  
+
   const groupChat = document.createElement("div");
   groupChat.classList.add("groupChatView");
   const contentGroupChat = document.createElement("div");
@@ -31,23 +31,21 @@ export const GroupChat = () => {
     <div id="cajaSalida"></div>
     <input type="text" id="cajaEntrada" placeholder="Escribe aquí">
     `;//incluir todo lo demas
-  
+
   btnSendMsj.addEventListener('click', () => {
     const userPrompt = textArea.value;
     textArea.value = '';
     enterMessage(userPrompt);
-    data.forEach((item) => {
-      communicateWithOpenAI(item , userPrompt)
-        .then(response => {
-          const messageElement = document.createElement('div');
-          messageElement.classList.add("enterMessage");
-          messageElement.innerHTML = `<strong>${item.name}:</strong> ${response}`;
-          divChatZone.appendChild(messageElement);
-        })
-        .catch(error => {
-          console.error('Erro:', error);
-        });
+    
+    const allMsj = data.map((item) => {
+      return [communicateWithOpenAI(item, userPrompt), item.name]
     });
+    Promise.all(allMsj).then(response => {
+      enterResponse(response);
+    })
+      .catch(error => {
+        console.error('Erro:', error);
+      });
   });
   groupChat.append(contentGroupChat, main);
   return groupChat;
@@ -60,4 +58,15 @@ function enterMessage(msj) {
   divChatZone.appendChild(messageElement);
   //chatContainer.scrollTop = chatContainer.scrollHeight;
   console.log(msj);
+}
+
+function enterResponse(array) {
+  array.forEach(item => {
+    item[0].then(response =>{
+      const messageElement = document.createElement('div');
+      messageElement.classList.add("enterResponse");
+      messageElement.innerHTML = `<strong>${item[1]}</strong> ${response}`;
+      divChatZone.appendChild(messageElement);
+    })
+  });
 }

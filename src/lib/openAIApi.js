@@ -1,9 +1,10 @@
 import { getApiKey } from "./apiKey.js";
 
 export const communicateWithOpenAI = (tour, prompt) => {
-  console.log(prompt, tour.name, getApiKey());
+  console.log('ejecucion del fetch')
+  //console.log(prompt, tour.name, getApiKey());
   const key = getApiKey();
-  console.log(key);
+  //console.log(key);
   const configOpenAI = {
     method: 'POST',
     headers: {
@@ -30,7 +31,7 @@ export const communicateWithOpenAI = (tour, prompt) => {
       if (!response.ok) {
         if (response.status === 401) {
           // Si la clave de API está caducada o no es válida
-          throw new Error('La clave de API no es válida o ha caducado.');
+          throw new Error('ApiKey is not valid');
         }
         throw new Error('Network response was not ok');
       }
