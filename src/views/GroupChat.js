@@ -1,12 +1,18 @@
-import { Header } from "../components/header.js";
-import { Footer } from "./../components/footer.js";
-//import data from "./data/dataset.js";
+// import { Header } from "../components/header.js";
+// import { Footer } from "./../components/footer.js";
+import { MainChatTours } from "../components/mainTours.js";
+import { communicateWithOpenAI } from "../lib/openAIApi.js";
+import data from '../data/dataset.js';
 //import { filterData } from '../lib/dataFunctions.js';
+const main = MainChatTours();
+const divChatZone = main.querySelector('div[id="chat-zone"]');
 
 export const GroupChat = () => {
+  const btnSendMsj = main.querySelector('button[class="btn-sendMsj"]');
+  const textArea = main.querySelector("textArea");
+  
   const groupChat = document.createElement("div");
   groupChat.classList.add("groupChatView");
-  groupChat.append(Header());
   const contentGroupChat = document.createElement("div");
   contentGroupChat.innerHTML = `
     <p class="groupChatGreeting">¡Hola! Bienvenid@ a Costa Rica ¿En que podemos servirte?</p>
@@ -24,8 +30,34 @@ export const GroupChat = () => {
     <input type="text" placeholder="Disfruta tu viaje">
     <div id="cajaSalida"></div>
     <input type="text" id="cajaEntrada" placeholder="Escribe aquí">
-    `//incluir todo lo demas
-  groupChat.append(contentGroupChat);
-  groupChat.append(Footer());
+    `;//incluir todo lo demas
+  
+  btnSendMsj.addEventListener('click', () => {
+    const userPrompt = textArea.value;
+    textArea.value = '';
+    enterMessage(userPrompt);
+    data.forEach((item) => {
+      communicateWithOpenAI(item , userPrompt)
+        .then(response => {
+          const messageElement = document.createElement('div');
+          messageElement.classList.add("enterMessage");
+          messageElement.innerHTML = `<strong>${item.name}:</strong> ${response}`;
+          divChatZone.appendChild(messageElement);
+        })
+        .catch(error => {
+          console.error('Erro:', error);
+        });
+    });
+  });
+  groupChat.append(contentGroupChat, main);
   return groupChat;
+};
+
+function enterMessage(msj) {
+  const messageElement = document.createElement('div');
+  messageElement.classList.add("enterMessage");
+  messageElement.innerHTML = `<strong>MADELYN:</strong> ${msj}`;
+  divChatZone.appendChild(messageElement);
+  //chatContainer.scrollTop = chatContainer.scrollHeight;
+  console.log(msj);
 }

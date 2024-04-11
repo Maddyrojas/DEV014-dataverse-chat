@@ -69,6 +69,7 @@ export const Home = () => {
   const btnLimpiar = mainHomeElement.querySelector('button[data-testid="button-clear"]');
   const btnHeader = headerElement.querySelector('button[name="btn-header"]');
   const textSearch = headerElement.querySelector('#search-header');
+  const btnPanel = headerElement.querySelector('button[name="btn-grupChat"]');
   const filterZone = mainHomeElement.querySelector('div[name="filter-zone"]');
 
   //---------------SELECTOR MODAL-------------------//
@@ -97,7 +98,7 @@ export const Home = () => {
 
   chexApi.addEventListener('change', () => {
     if(chexApi.checked) {
-      textApi.value="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";
+      textApi.value="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";
     } else {
       textApi.value="";
     }
@@ -112,6 +113,9 @@ export const Home = () => {
     filterZone.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
+  btnPanel.addEventListener('click', () => {
+    navigateTo('/panel');
+  });
   //------------EVENT MAIN------------//
   filterProvincia.addEventListener('change', () => {
     if (filterProvincia.value === 'All Options') {

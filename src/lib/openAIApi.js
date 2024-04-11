@@ -3,6 +3,7 @@ import { getApiKey } from "./apiKey.js";
 export const communicateWithOpenAI = (tour, prompt) => {
   console.log(prompt, tour.name, getApiKey());
   const key = getApiKey();
+  console.log(key);
   const configOpenAI = {
     method: 'POST',
     headers: {
