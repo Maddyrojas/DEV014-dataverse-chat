@@ -26,4 +26,12 @@ export const data = [
     "tipoTurismo": "turismo cultural",
     "gastoPromedio": 50,
   },
+  {//11_Isla Tortuga
+    "id": "11_lugarTuristico",
+    "name": "Isla Tortuga",
+    "location": "Puntarenas",
+    "shortDescription": "Isla paradisíaca con aguas cristalinas y zonas acuáticas.",
+    "tipoTurismo": "turismo de playa",
+    "gastoPromedio": 120,
+  },
 ];
