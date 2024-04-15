@@ -696,7 +696,7 @@ hr{
     height: 30vh;
   }
 }
-@media (min-width: 1000px) {/*laptop*/
+@media (min-width: 1000px) and (max-width: 3000px) {/*laptop*/
   .imagine-cutted {
     width: 45vh;
     height: 40vh;
@@ -711,7 +711,7 @@ hr{
   }
   .divDescription dd {
     width: 44%;
-    height: 13.3vh;
+    height: 12.3vh;
     padding-left: 16px;
   }
   #btnInfo {

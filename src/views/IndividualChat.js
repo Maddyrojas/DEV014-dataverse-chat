@@ -13,7 +13,7 @@ const divChatZone = mainChatElement.querySelector('div[id="chat-zone"]');
 function enterMessage(msj) {
   const messageElement = document.createElement('div');
   messageElement.classList.add("enterMessage");
-  messageElement.innerHTML = `<strong>MADELYN: </strong> ${msj}`;
+  messageElement.innerHTML = `<strong>MADELYN:</strong>&nbsp${msj}`;
   divChatZone.appendChild(messageElement);
 }
 
@@ -25,12 +25,31 @@ export const IndividualChat = (objName) => {
   const divInfoLaptop = mainChatElement.querySelector('div[class="mainDiv"]');
   const btnSendMsj = mainChatElement.querySelector('button[class="btn-sendMsj"]');
   const textArea = mainChatElement.querySelector("textArea");
-
+  
+  const guideImg = mainChatElement.querySelector('img[class="guide-img"]');
   const infoTour = data.find(tour => tour.name === objName.name);
 
   divInfoLaptop.querySelector("h1.placeName").textContent = infoTour.name;
   divInfoLaptop.querySelector("img.img-place").src = infoTour.imageUrl;
 
+  if (infoTour.location === "Puntarenas") {
+    guideImg.src = infoTour.imageUrl;
+  }
+  if (infoTour.location === "Limón") {
+    guideImg.src = infoTour.imageUrl;
+  }
+  if (infoTour.location === "Guanacaste") {
+    guideImg.src = infoTour.imageUrl;
+  }
+  if (infoTour.location === "San José") {
+    guideImg.src = infoTour.imageUrl;
+  }
+  if (infoTour.location === "Alajuela") {
+    guideImg.src = infoTour.imageUrl;
+  }
+  if (infoTour.location === "Cartago") {
+    guideImg.src = infoTour.imageUrl;
+  }
   // divFirstMsj.classList.add("enterResponse");
   // divFirstMsj.innerHTML = `<strong>System:</strong> Hola yo soy ${infoTour.name}, te invito a conocerme por medio de tus consultas, por favor no te guardes ninguna duda...`;
   // divChatZone.appendChild(divFirstMsj);
@@ -44,7 +63,7 @@ export const IndividualChat = (objName) => {
       .then(response => {
         const messageElement = document.createElement('div');
         messageElement.classList.add("enterResponse");
-        messageElement.innerHTML = `<strong>SYSTEM: </strong>  ${response}`;
+        messageElement.innerHTML = `<strong>SYSTEM: </strong>&nbsp${response}`;
         divChatZone.appendChild(messageElement);
       })
       .catch(error => {

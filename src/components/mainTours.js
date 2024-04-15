@@ -3,17 +3,16 @@ export const MainChatTours = () => {
   individualMain.innerHTML = `
   <div class= "mainDiv">
   <img id=dotsIcon src="https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/876f39a5281c0d6954491d1754a1cb70adb6b4f1/imgs/menu-dots_3917763.svg" alt="dotsIcon">
+  <div class="greating-zone">
+    <img id="guide-img" class="guide-img" src="https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/876f39a5281c0d6954491d1754a1cb70adb6b4f1/imgs/menu-dots_3917763.svg" alt="guide">
+    <p id="greating" class="guide-greating">
+      texto de saludo
+    </p>
+  </div>
   <div id="infOnPC">
     <img class="img-place" src="" alt="Image of the place">
   </div>
   <h1 class="placeName"></h1>
-  <div class="greatin-zone">
-    <p id="greeting">
-      <!-- texto de saludo -->
-    </p>
-    <div id="guide-img" class="guide-img">
-    </div>
-  </div>
   <ul class="cloud-zone">
     <li>Diversión</li>
     <li>Aventuras</li>
