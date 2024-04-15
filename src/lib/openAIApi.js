@@ -28,16 +28,14 @@ export const communicateWithOpenAI = (tour, prompt) => {
   };
   return fetch('https://api.openai.com/v1/chat/completions', configOpenAI)
     .then(response => {
-      if (!response.ok) {
-        if (response.status === 401) {
-          // Si la clave de API está caducada o no es válida
-          throw new Error('ApiKey is not valid');
-        }
-        throw new Error('Network response was not ok');
-      }
+      // if (!response.ok) {
+      //   if (response.status === 401) {
+      //     throw new Error('ApiKey is not valid');
+      //   }
+      // }
       return response.json();
     }).then(data => {
-      console.log('Data received from OpenAI:', data);
+      // console.log('Data received from OpenAI:', data);
       return data.choices[0].message.content;
     }).catch(error => {
       throw error

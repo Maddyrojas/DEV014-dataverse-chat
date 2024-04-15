@@ -1,17 +1,13 @@
 import { communicateWithOpenAI } from "../src/lib/openAIApi.js";
 
-window.fetch = jest.fn(() =>
-  Promise.resolve({
-    ok: true,
-    json: () => Promise.resolve("¡Hola! ¡Bienvenido a Isla Tortuga! ¿En qué puedo ayudarte hoy?"),
-  })
-);
+window.fetch = jest.fn();
 
 describe('communicateWithOpenAI', () => {
   beforeEach(() => {
     fetch.mockClear();
   });
-  test('communicateWithOpenAI', () => {
+
+  test('communicateWithOpenAI - Respuesta ok', async () => {
     const prompt = "Hola";
     const tour = {//11_Isla Tortuga
       "id": "11_lugarTuristico",
@@ -28,12 +24,33 @@ describe('communicateWithOpenAI', () => {
         "alimentacion": "Restaurante Tropical"
       }
     }
-    return communicateWithOpenAI(tour, prompt)
-      .then(response => {
-        expect(response).toBe('¡Hola! ¡Bienvenido a Isla Tortuga! ¿En qué puedo ayudarte hoy?');
-      })
-      .catch(error =>{
-        expect(error).toBe(error);
-      });
+
+    fetch.mockResolvedValueOnce({
+      ok: true,
+      json: () => Promise.resolve({ choices: [{ message: { content: '¡Hola! ¡Bienvenido a Isla Tortuga! ¿En qué puedo ayudarte hoy?' } }] })
+    });
+
+    try {
+      const response = await communicateWithOpenAI(tour, prompt);
+      expect(response).toBe('¡Hola! ¡Bienvenido a Isla Tortuga! ¿En qué puedo ayudarte hoy?');
+    } catch (error) {
+      expect(error).toBe(error);
+    }
+  });
+  test('communicateWithOpenAI - Respuesta no ok', async () => {
+    const prompt = "Hola";
+    const tour = {/* ... */}
+   
+    fetch.mockRejectedValueOnce({
+      status: 401,
+      json: () => Promise.resolve({ error: 'ApiKey is not valid' }) 
+    });
+
+    try {
+      await communicateWithOpenAI(tour, prompt);
+      expect(true).toBe(false);
+    } catch (error) {
+      expect(error instanceof Error).toBe(false);
+    }
   });
 });
