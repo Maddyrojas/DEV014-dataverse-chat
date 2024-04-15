@@ -13,14 +13,13 @@ const divChatZone = mainChatElement.querySelector('div[id="chat-zone"]');
 function enterMessage(msj) {
   const messageElement = document.createElement('div');
   messageElement.classList.add("enterMessage");
-  messageElement.innerHTML = `<strong>MADELYN:</strong> ${msj}`;
+  messageElement.innerHTML = `<strong>MADELYN: </strong> ${msj}`;
   divChatZone.appendChild(messageElement);
-  //chatContainer.scrollTop = chatContainer.scrollHeight;
-  console.log(msj);
 }
 
 export const IndividualChat = (objName) => {
   const individualChat = document.createElement("div"); //div all page
+  individualChat.classList.add("mainContainer");
   //const divFirstMsj = document.createElement('div');
 
   const divInfoLaptop = mainChatElement.querySelector('div[class="mainDiv"]');
@@ -44,8 +43,8 @@ export const IndividualChat = (objName) => {
     communicateWithOpenAI(infoTour, userPrompt)
       .then(response => {
         const messageElement = document.createElement('div');
-        messageElement.classList.add("enterMessage");
-        messageElement.innerHTML = `<strong>SYSTEM:</strong> ${response}`;
+        messageElement.classList.add("enterResponse");
+        messageElement.innerHTML = `<strong>SYSTEM: </strong>  ${response}`;
         divChatZone.appendChild(messageElement);
       })
       .catch(error => {

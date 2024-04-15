@@ -20,9 +20,6 @@ export const MainChatTours = () => {
     <li>Cultura</li>
   </ul>
   <div class="chat-zone" id="chat-zone">
-    <div class="enterResponse">
-    </div>
-    <!-- aqui ingresan div crea los mensajes a travez del evento del boton -->
   </div>
   <div class="aiInteractions">
     <textarea id="userTextArea"></textarea>

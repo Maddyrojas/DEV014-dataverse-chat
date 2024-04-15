@@ -24,6 +24,12 @@
     font-weight: 700;
     font-size: 30px;
   }
+  .placeName {
+    font-size: 40px;
+    margin-top: 6%;
+    width: 85%;
+    text-align: center;
+   }
   }
 /* grid general*/
 .mainDiv {
@@ -32,9 +38,12 @@
   grid-template-rows: 300px 300px 300px;
   justify-items: center;
   margin-top: 2%;
-  margin-bottom: -5%;
+  margin-bottom: 2%;
 }
 
+.mainContainer {
+ background-color: #FFEEDD;
+}
 /* nav*/
 .chat-header {
   height: 100%;
@@ -63,8 +72,6 @@
 .placeName {
   grid-column: 1;
   grid-row: 2;
-  font-size: 55px;
-  margin-top: 8%;
  }
 .descrip-IndividualChat{
   grid-column: 1;
@@ -74,14 +81,15 @@
 
 .aiInteractions {
   grid-column: 2 / 4;
-  grid-row: 3;
+  grid-row: 3 / 4;
   width: 90%;
+  margin-top: 12%;
 }
 
 .aiInteractions textarea {
   width: 96%;
   resize: vertical;
-  height: 50%;
+  height: 75%;
   align-items: end;
   background-color: #D9D9D9;
   border: none;
@@ -105,46 +113,82 @@
 .btn-sendMsj img {
   width: 100%;
   height: 100%;
+  background-color: #FFEEDD;
 }
 /* div that contain cloud zone (MainTours*/
 .cloud-zone {
   grid-row: 1;
   grid-column: 2 / 4;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: inherit;
+  justify-items: center;
   margin-top: 1%;
-  width: 22%;
+  width: 100%;
+  height: 100%;
+  margin-right: 3%;
 }
 
 .cloud-zone li {
-  margin-left: 50%;
-  margin-right: 50%;
   background-color: #0791BE;
   height: 7%;
-  padding: 8%;
-  width: 50%;
-  border-radius: 51%;
+  padding: 6%;
+  width: 75%;
+  clip-path: ellipse(50% 91% at 50% 50%);
   color: #fff;
   text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
 }
 /* div that contain chat zone (MainTours*/
 .chat-zone {
   grid-column: 2 / 4;
-  grid-row: 1 / 2;
+  grid-row: 1 / 3;
   min-width: 250px;
   width: 90%;
-  height: 128%;
+  min-height: 83%;
+  height: auto;
   background-color: #86AFEC;
-  margin-top: 8%;
+  margin-top: 10%;
   margin-right: 3%;
   border-radius: 5px;
   padding: 4%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  font-size: 18px;
+
+  scrollbar-width: thin; 
+  scrollbar-color: #4467a059 #0f375a3d;
 }
 
 .enterResponse {
   height: auto;
-  width: 50%;
-  font-size: 18px;
+  text-align: justify;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-right: 30%;
+  min-width: fit-content;
+  background-color: #F56960;
+  min-height: fit-content;
+  padding: 1%;
+  border-radius: 19px;
+  align-self: self-start;
+  color: #fff;
+  margin-right: 30%;
+}
+
+.enterMessage {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  min-width: fit-content;
+  background-color: #FFFFFF;
+  min-height: fit-content;
+  padding: 1%;
+  border-radius: 19px;
+  align-self: self-end;
+  color: #F56960;
+  margin: 1%;
+  margin-left: 29%;
 }
