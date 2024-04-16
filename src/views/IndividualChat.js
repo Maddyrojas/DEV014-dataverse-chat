@@ -2,11 +2,11 @@ import { Footer } from "../components/footer.js";
 import { MainChatTours } from "../components/mainTours.js";
 import data from '../data/dataset.js';
 import { communicateWithOpenAI } from "../lib/openAIApi.js";
-import { NavIndividualChat } from "../components/navindividualchat.js";
+import { Nav } from "../components/nav.js";
 
 const mainChatElement = MainChatTours();
 const footerElement = Footer();
-const navindividualchatElement = NavIndividualChat();
+const navindividualchatElement = Nav("CONTACT");
 
 const divChatZone = mainChatElement.querySelector('div[id="chat-zone"]');
 

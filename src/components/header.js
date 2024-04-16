@@ -1,17 +1,13 @@
+import { Nav } from "./nav.js";
+
 export const Header = () => {
+  const navElement = Nav("CONTACT");
   const header = document.createElement("header");
-  header.style.backgroundImage = "url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/header.jpg)";
   header.innerHTML = `   
     <div class="top-page">
         <div class="nav-zone">
-            <nav>
-                <ul>
-                    <li class="li-nav"><a href="">HOME</a></li>
-                    <li class="li-nav"><a href="">DETAILS</a></li>
-                    <li class="li-nav"><a href="">CONTACT</a></li>
-                </ul>
-                <input type="search" name="search-header" id="search-header" placeholder="¿Qué lugar estas buscando?">
-            </nav>
+            <div id ="enterNav"></div>
+            <input type="search" name="search-header" id="search-header" placeholder="¿Qué lugar estas buscando?">
             <button class="btn-grupChat" name="btn-grupChat">CHAT GRUPAL</button>
         </div>
         <h1>Costa Rica te enamora</h1>
@@ -19,5 +15,9 @@ export const Header = () => {
         <button class="btn-header" name="btn-header">SABER MÁS</button>
     </div>
     `;
+  
+  //-----------select header ------------//
+  const enterNav = header.querySelector('div[id="enterNav"]');
+  enterNav.appendChild(navElement);
   return header;
 };

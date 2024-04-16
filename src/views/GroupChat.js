@@ -1,10 +1,11 @@
-// import { Header } from "../components/header.js";
+import { Nav } from "../components/nav.js";
 // import { Footer } from "./../components/footer.js";
 import { MainChatTours } from "../components/mainTours.js";
 import { communicateWithOpenAI } from "../lib/openAIApi.js";
 import data from '../data/dataset.js';
 //import { filterData } from '../lib/dataFunctions.js';
 const main = MainChatTours();
+const header = Nav("HELP");
 const divChatZone = main.querySelector('div[id="chat-zone"]');
 
 export const GroupChat = () => {
@@ -47,7 +48,7 @@ export const GroupChat = () => {
         console.error('Erro:', error);
       });
   });
-  groupChat.append(contentGroupChat, main);
+  groupChat.append(header,contentGroupChat, main);
   return groupChat;
 };
 
