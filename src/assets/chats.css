@@ -1,14 +1,128 @@
 /* div that contain text area and button (MainTours*/
 
-@media (max-width: 785px) {
+@media (max-width: 500px) {
   #dotsIcon {
+    grid-column: 1;
+    grid-row: 2;
     width: 10%;
     height: 10%;
+    display: none;
+  }
+
+  .guide-img {
+    max-width: 14%;
+    height: auto;
+    clip-path: circle(48% at center);
+  }
+  .guide-greating {
+    font-size: 8px;
+    width: 80%;
+    text-align: center;
+  }
+  .cloud-zone {
+    margin-top: -3%;
+  }
+  .cloud-zone li {
+    font-size: 12.5px;
+  }
+  .img-place{
+    display: none;
+  }
+  .chat-zone {
+    grid-column: 1 / 4;
+    grid-row: 2 / 4;
+    width: 80%;
+    margin-top: 8%;
+    margin-right: 0%;
+  }
+  .placeName {
+    font-size: 30px;
+    width: 81%;
+    justify-content: center;
+    grid-column: 1/4;
+    grid-row: 1;
+    margin-top: 0%;
+   }
+  .aiInteractions {
+    grid-column: 1 / 4;
+    grid-row: 4;
+    width: 90%;
+    margin-top: 3%;
+  }
+  .aiInteractions textarea {
+    width: 88%;
+    margin-left: 1%;
+    height: 40%;
+    margin-top: 3%;
+  }
+  .btn-sendMsj {
+    height: 40%;
+  }
+  .greating-zone {
+    margin-top: 7%;
+  }
+  #infOnPC hr{
+    display: none;
   }
 }
 
-@media (min-width: 785px) and (max-width: 1000px) {
+@media (min-width: 500px) and (max-width: 1000px) {
   /*tablet*/
+  #dotsIcon {
+    width: 10%;
+    height: 10%;
+    display: none;
+  }
+  .cloud-zone {
+    margin-top: 2%;
+  }
+  .guide-img {
+    max-width: 14%;
+    height: auto;
+    clip-path: circle(48% at center);
+  }
+  .guide-greating {
+    font-size: 12px;
+    text-align: center;
+  }
+  .img-place{
+    display: none;
+  }
+  .chat-zone {
+    grid-column: 1 / 4;
+    grid-row: 2 / 4;
+    width: 80%;
+    margin-top: 10%;
+    margin-right: 0%;
+  }
+  .placeName {
+    font-size: 35px;
+    width: 80%;
+    justify-content: center;
+    grid-column: 1/4;
+    grid-row: 1;
+    margin-top: 0%;
+   }
+  .aiInteractions {
+    grid-column: 1 / 4;
+    grid-row: 4;
+    width: 90%;
+    margin-top: 7%;
+  }
+  .aiInteractions textarea {
+    width: 88%;
+    margin-left: 1%;
+    height: 40%;
+  }
+  .btn-sendMsj {
+    height: 50%;
+  }
+  .greating-zone {
+    margin-top: 5%;
+  }
+  #infOnPC hr{
+    display: none;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -25,11 +139,57 @@
     font-size: 30px;
   }
   .placeName {
-    font-size: 40px;
-    margin-top: 5%;
-    width: 85%;
+    font-size: 52px;
+    width: 80%;
     justify-content: center;
+    margin-right: 2%;
+    grid-column: 1;
+    grid-row: 4;
+    margin-top: -5%;
    }
+   .guide-img{
+    max-width: 14%;
+    height: auto;
+    clip-path: circle(48% at center);
+  }
+  .guide-greating {
+    font-size: 17px;
+  }
+  .cloud-zone {
+    margin-top: 1%;
+  }
+  .chat-zone {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    width: 90%;
+    margin-top: 10%;
+    margin-right: 3%;
+  }
+  .aiInteractions {
+    grid-column: 2 / 4;
+    grid-row: 4;
+    width: 90%;
+    margin-top: 12%;
+  }
+  .aiInteractions textarea {
+    width: 95%;
+    margin-left: -6%;
+    height: 75%;
+  }
+  .btn-sendMsj {
+    height: 56%;
+  }
+  .greating-zone {
+    margin-top: -2%;
+  }
+  #infOnPC hr{
+    width: 2px;
+    background-color: #F56960;
+    height: 255%;
+    margin-left: 96%;
+    margin-top: -69%;
+  }
+
   }
 /* grid general*/
 .mainDiv {
@@ -62,6 +222,20 @@
 .greating-zone {
   grid-column: 1 / 4;
   grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.greating-zone hr {
+  border: none;
+  height: 0.7%;
+  background-color: #F56960;
+  width: 80%;
+}
+.guide-greating {
+  font-weight: 500;
+  margin-top: 2%;
 }
 /* sobre chat zone*/
 #infOnPC{
@@ -72,35 +246,26 @@
   width: 90%;
   margin-left: 4%;
   border-radius: 5%;
-  margin-top: 7%;
+  margin-top: 20%;
 }
-.placeName {
-  grid-column: 1;
-  grid-row: 3;
- }
+#guide-img-chat{
+  height: auto;
+}
+
 .descrip-IndividualChat{
   grid-column: 1;
   grid-row: 3 / 4;
   margin-top: 28%;
 }
 
-.aiInteractions {
-  grid-column: 2 / 4;
-  grid-row: 4;
-  width: 90%;
-  margin-top: 12%;
-}
 
 .aiInteractions textarea {
-  width: 96%;
   resize: vertical;
-  height: 75%;
   align-items: end;
   background-color: #D9D9D9;
   border: none;
   border-radius: 5%;
   padding: 1%;
-  margin-left: -6%;
 }
 
 .aiInteractions textarea::placeholder {
@@ -110,7 +275,6 @@
 .btn-sendMsj {
   background-color: #ffffff;
   width: 6%;
-  height: 56%;
   border: none;
   margin-left: 1.5%;
 }
@@ -123,14 +287,12 @@
 /* div that contain cloud zone (MainTours*/
 .cloud-zone {
   grid-row: 2;
-  grid-column: 2 / 4;
+  grid-column: 1 / 4;
   display: grid;
   grid-template-columns: inherit;
   justify-items: center;
-  margin-top: 1%;
-  width: 100%;
+  width: 68%;
   height: 100%;
-  margin-right: 3%;
 }
 
 .cloud-zone li {
@@ -146,22 +308,16 @@
 }
 /* div that contain chat zone (MainTours*/
 .chat-zone {
-  grid-column: 2 / 4;
-  grid-row: 2 / 4;
   min-width: 250px;
-  width: 90%;
   min-height: 83%;
   height: auto;
   background-color: #86AFEC;
-  margin-top: 10%;
-  margin-right: 3%;
   border-radius: 5px;
   padding: 4%;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   font-size: 18px;
-
   scrollbar-width: thin; 
   scrollbar-color: #4467a059 #0f375a3d;
 }
@@ -180,7 +336,8 @@
   border-radius: 19px;
   align-self: self-start;
   color: #fff;
-  margin-right: 30%;
+  align-items: center;
+  margin-right: 50%;
 }
 
 .enterMessage {

@@ -6,11 +6,12 @@ export const MainChatTours = () => {
   <div class="greating-zone">
     <img id="guide-img" class="guide-img" src="https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/876f39a5281c0d6954491d1754a1cb70adb6b4f1/imgs/menu-dots_3917763.svg" alt="guide">
     <p id="greating" class="guide-greating">
-      texto de saludo
     </p>
+    <hr>
   </div>
   <div id="infOnPC">
     <img class="img-place" src="" alt="Image of the place">
+    <hr>
   </div>
   <h1 class="placeName"></h1>
   <ul class="cloud-zone">
@@ -27,7 +28,6 @@ export const MainChatTours = () => {
     </button>
   </div>
     <div class="descrip-IndividualChat" id="infOnDesk">
-      definir que queremos que se muestre
     </div>
     <div class="modal-IndividualChat" id="infOnMobile">
       <!-- definir que queremos que se muestre -->

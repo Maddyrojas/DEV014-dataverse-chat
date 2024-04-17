@@ -27,32 +27,13 @@ export const IndividualChat = (objName) => {
   const textArea = mainChatElement.querySelector("textArea");
   
   const guideImg = mainChatElement.querySelector('img[class="guide-img"]');
+  const guideGreat = mainChatElement.querySelector ('p[class="guide-greating"]');
   const infoTour = data.find(tour => tour.name === objName.name);
 
   divInfoLaptop.querySelector("h1.placeName").textContent = infoTour.name;
   divInfoLaptop.querySelector("img.img-place").src = infoTour.imageUrl;
-
-  if (infoTour.location === "Puntarenas") {
-    guideImg.src = infoTour.imageUrl;
-  }
-  if (infoTour.location === "Limón") {
-    guideImg.src = infoTour.imageUrl;
-  }
-  if (infoTour.location === "Guanacaste") {
-    guideImg.src = infoTour.imageUrl;
-  }
-  if (infoTour.location === "San José") {
-    guideImg.src = infoTour.imageUrl;
-  }
-  if (infoTour.location === "Alajuela") {
-    guideImg.src = infoTour.imageUrl;
-  }
-  if (infoTour.location === "Cartago") {
-    guideImg.src = infoTour.imageUrl;
-  }
-  // divFirstMsj.classList.add("enterResponse");
-  // divFirstMsj.innerHTML = `<strong>System:</strong> Hola yo soy ${infoTour.name}, te invito a conocerme por medio de tus consultas, por favor no te guardes ninguna duda...`;
-  // divChatZone.appendChild(divFirstMsj);
+  guideGreat.textContent = `Hola yo soy ${infoTour.guideName}, ¡Bienvenid@s a ${infoTour.name}! hoy sere tu guía, por favor no te guardes ninguna duda...`;
+  guideImg.src = infoTour.guideImg;
 
   //----------EVENT----------//
   btnSendMsj.addEventListener('click', () => {
@@ -63,7 +44,7 @@ export const IndividualChat = (objName) => {
       .then(response => {
         const messageElement = document.createElement('div');
         messageElement.classList.add("enterResponse");
-        messageElement.innerHTML = `<strong>SYSTEM: </strong>&nbsp${response}`;
+        messageElement.innerHTML = `<img id="guide-img-chat" class="guide-img" src=${infoTour.guideImg}>&nbsp &nbsp <strong>${infoTour.guideName}: </strong>&nbsp${response}`;
         divChatZone.appendChild(messageElement);
       })
       .catch(error => {

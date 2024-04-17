@@ -8,6 +8,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/01_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 150,
+    "guideName": "Alexis",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Alexis.jpeg",
     "facts": {
       "museo": "Museo de Volcanología",
       "compras": "Arte Tico",
@@ -23,6 +25,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/02_lugarTuristico.jpg",
     "tipoTurismo": "turismo de playa",
     "gastoPromedio": 120,
+    "guideName":"Tico",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Tico%20el%20Cocodrilo.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Mercado Artesanal Manuel Antonio",
@@ -38,6 +42,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/03_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 130,
+    "guideName":"Tico",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Tico%20el%20Cocodrilo.jpeg",
     "facts": {
       "museo": "Museo de Historia Natural Monteverde",
       "compras": "Arte y Artesanía Monteverde",
@@ -53,6 +59,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/04_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 140,
+    "guideName": "Carlos",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Carlos.jpeg",
     "facts": {
       "museo": "Museo de Conservación de Tortugas",
       "compras": "Artesanías del Caribe",
@@ -68,6 +76,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/05_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 160,
+    "guideName":"Tico",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Tico%20el%20Cocodrilo.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Artesanías Osa Peninsula",
@@ -83,6 +93,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/06_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 140,
+    "guideName": "Danny",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Daniel.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Artesanías Guanacaste",
@@ -98,6 +110,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/07_lugarTuristico.jpg",
     "tipoTurismo": "turismo cultural",
     "gastoPromedio": 50,
+    "guideName": "Tuki",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Tuki%20el%20quetzal.jpeg",
     "facts": {
       "museo": "Museo del Teatro Nacional",
       "compras": "Tienda de Souvenirs",
@@ -113,6 +127,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/08_lugarTuristico.jpg",
     "tipoTurismo": "turismo de playa",
     "gastoPromedio": 80,
+    "guideName": "Danny",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Daniel.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Arte y Artesanía Guanacaste",
@@ -128,6 +144,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/09_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 70,
+    "guideName": "Alexis",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Alexis.jpeg",
     "facts": {
       "museo": "Centro de Interpretación Geológica",
       "compras": "Tienda de Recuerdos Poás",
@@ -143,6 +161,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/10_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 90,
+    "guideName": "Carlos",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Carlos.jpeg",
     "facts": {
       "museo": "Museo Marino Cahuita",
       "compras": "Artesanías Caribeñas",
@@ -158,6 +178,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/11_lugarTuristico.jpg",
     "tipoTurismo": "turismo de playa",
     "gastoPromedio": 120,
+    "guideName":"Tico",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Tico%20el%20Cocodrilo.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Tienda de Recuerdos Isla Tortuga",
@@ -173,6 +195,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/12_lugarTuristico.jpg",
     "tipoTurismo": "turismo de playa",
     "gastoPromedio": 100,
+    "guideName":"Tico",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Tico%20el%20Cocodrilo.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Tiendas Locales",
@@ -188,6 +212,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/13_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 130,
+    "guideName":"Tico",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Tico%20el%20Cocodrilo.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Tienda de Buceo",
@@ -203,6 +229,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/14_lugarTuristico.jpg",
     "tipoTurismo": "turismo de playa",
     "gastoPromedio": 80,
+    "guideName": "Danny",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Daniel.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Tienda de Surf",
@@ -218,6 +246,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/15_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 60,
+    "guideName": "Danny",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Daniel.jpeg",
     "facts": {
       "museo": "Centro de Interpretación Geológica",
       "compras": "Arte y Artesanía Guanacaste",
@@ -233,6 +263,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/16_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 70,
+    "guideName":"Tico",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Tico%20el%20Cocodrilo.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Tienda de Souvenirs Carara",
@@ -248,6 +280,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/17_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 100,
+    "guideName":"Tico",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Tico%20el%20Cocodrilo.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Arte y Artesanía Cabo Blanco",
@@ -263,6 +297,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/18_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 120,
+    "guideName": "Tuki",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Tuki%20el%20quetzal.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Arte y Artesanía Chirripó",
@@ -278,6 +314,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/19_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 80,
+    "guideName": "Carlos",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Carlos.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Artesanías del Caribe",
@@ -293,6 +331,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/20_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 90,
+    "guideName": "Brie",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Brie%20la%20colibrie.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Arte y Artesanía Cartago",
@@ -308,6 +348,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/21_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 110,
+    "guideName": "Danny",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Daniel.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Artesanías Guanacaste",
@@ -323,6 +365,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/22_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 150,
+    "guideName":"Tico",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Tico%20el%20Cocodrilo.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Tienda de Buceo",
@@ -338,6 +382,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/23_lugarTuristico.jpg",
     "tipoTurismo": "turismo de playa",
     "gastoPromedio": 90,
+    "guideName": "Danny",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Daniel.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Tiendas Locales Tamarindo",
@@ -353,6 +399,8 @@ export default [
     "imageUrl": "https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/24_lugarTuristico.jpg",
     "tipoTurismo": "turismo de aventura",
     "gastoPromedio": 100,
+    "guideName":"Tico",
+    "guideImg": "https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/view/imgs/Tico%20el%20Cocodrilo.jpeg",
     "facts": {
       "museo": "undefined",
       "compras": "Artesanías Osa Peninsula",

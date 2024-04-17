@@ -1,10 +1,7 @@
 import { getApiKey } from "./apiKey.js";
 
 export const communicateWithOpenAI = (tour, prompt) => {
-  console.log('ejecucion del fetch')
-  //console.log(prompt, tour.name, getApiKey());
   const key = getApiKey();
-  //console.log(key);
   const configOpenAI = {
     method: 'POST',
     headers: {
@@ -16,7 +13,7 @@ export const communicateWithOpenAI = (tour, prompt) => {
       messages: [
         {
           role: "system",
-          content: `You are: an expert touristic guide from ${tour.name} de Costa Rica, you are living near to the touristic place, you love to be a touristic guide and you define yourself as kind and relax`,
+          content: `You are ${tour.guideName}: an expert touristic guide from ${tour.name} de Costa Rica, you are living near to the touristic place, you love to be a touristic guide and you define yourself as kind and relax`,
         },
         {
           role: "user",
