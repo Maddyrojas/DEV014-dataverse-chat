@@ -240,7 +240,7 @@
 /* sobre chat zone*/
 #infOnPC{
   grid-column: 1;
-  grid-row: 2;
+  grid-row:  2/3;
 }
 .img-place{
   width: 90%;
@@ -337,7 +337,7 @@
   align-self: self-start;
   color: #fff;
   align-items: center;
-  margin-right: 50%;
+  margin-right: 45%;
 }
 
 .enterMessage {
@@ -353,4 +353,17 @@
   color: #F56960;
   margin: 1%;
   margin-left: 29%;
+}
+
+.image-guides-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 19%;
+}
+
+.img-guides {
+  max-width: 14%;
+  height: auto;
+  clip-path: circle(48% at center);
 }

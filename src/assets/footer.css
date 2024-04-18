@@ -1,0 +1,136 @@
+/*footer */
+footer {
+    position: relative;
+    display: flex;
+    text-align: left;
+    margin-top: 20px;
+    padding: 10px;
+    height: 500px;
+    background-color: #383838;
+}
+
+.zone-infoot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.infoot {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 30vh;
+    color: white;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: rgba(135, 135, 135, 0.3);
+    margin-top: 5px;
+}
+
+.btn-subcrip {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    color: white;
+    border-radius: 5px;
+    border: 5px #F56960;
+    font-size: 20px;
+}
+
+.foot {
+    position: absolute;
+    background-color: #404040;
+    bottom: 0px;
+    left: 0px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.foot1 {
+    color: white;
+    font-size: 20px;
+    margin-left: 5%;
+
+}
+
+.foot2 {
+    position: absolute;
+    right: 60px;
+    color: white;
+    font-size: 20px;
+}
+
+@media (max-width: 785px) {/*phone*/
+    footer {
+        height: 25vh;
+    }
+    #infoot3 {
+        width: 60%;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        transform: translateX(-30%);
+        /* El left mueve una 35 y el transform reduce de la midad de lo que se movio par centrar */
+        right: auto;
+    }
+    .btn-subcrip {
+        width: 250px;
+        height: 40px;
+        margin-top: 8px;
+    }
+    .foot {
+        height: 50px;
+    }
+    #search-header,
+    .btn-header,
+    #infoot1,
+    #infoot2,
+    .foot1 {
+        display: none;
+    }
+    .foot2 {
+        font-size: 15px;
+        position: absolute;
+        left: 35%;
+        transform: translateX(-25%);
+        /* El left mueve una 35 y el transform reduce de la midad de lo que se movio par centrar */
+        right: 0%;
+    }
+}
+@media (min-width: 785px) and (max-width: 1000px) { /*tablet*/
+    #infoot2{
+      display: none;
+    }
+    footer {
+        height: 35vh;
+      }
+      .zone-infoot{
+        padding-left: 10%;
+      }
+      .infoot{
+        width: 30%;
+      }
+      
+      .foot{
+        height: 80px;
+      }
+      .foot1, .foot2{
+        font-size: 15px;
+      }
+}
+@media (min-width: 1000px) {/*laptop*/
+    footer {
+        height: 50vh;
+      }
+      .foot{
+        height: 100px;
+      }
+}
+

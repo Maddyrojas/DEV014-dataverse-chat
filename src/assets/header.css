@@ -1,0 +1,156 @@
+header {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  background-image: url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/header.jpg); 
+}
+
+.top-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-zone {
+  margin-top: 0px;
+  padding-bottom: 0px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(83, 8, 3, 0.25);
+}
+
+/*nav {
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  / Centra los elementos dentro de este div */
+  /*flex-grow: 1;
+  / Permite que este div ocupe el espacio disponible /
+}*/
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0%;
+  background-size: cover;
+  align-items: stretch;
+  justify-content: space-around;
+  background-image: url(https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/Imagenes%20Dataverse/header.jpg);
+}
+
+.li-nav {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#search-header {
+    margin-left: 40px;
+    border-radius: 5px;
+    width: 25%;
+    height: 40px;
+    text-align: center;
+    /*El texto interno del cuadro search se alinea*/
+}
+
+.btn-grupChat {
+    width: 15%;
+    height: 35px;
+    color: white;
+    border-radius: 50px;
+    border: 5px #F56960;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0.5, 0.5);
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar por encima */
+    transition: background-color 0.3s;
+    /* Suaviza la transición de color */
+    margin-right: 40px;
+}
+
+.btn-grupChat:hover {
+    background-color: white;
+    /* Color de fondo al pasar el ratón por encima */
+    color: #000;
+}
+
+h1 {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    display: flex;
+    font-size: 90px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    text-shadow: -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    font-family: 'Satisfy';
+}
+
+.text-welcome {
+    margin-top: 0px;
+    text-align: center;
+    max-width: 610px;
+    width: 60%;
+    color: #fff;
+    font-size: 17px;
+}
+
+.btn-header {
+    margin-top: 40px;
+    width: 100px;
+    height: 35px;
+    color: white;
+    border-radius: 5px;
+    border: 5px #F56960;
+}
+
+@media (max-width: 785px) {/*phone*/
+    header {
+        height: 55vh;
+        background-position: initial;
+        background-size: contain;
+    }
+    select[name="filtrarProvincia"],
+    .button-clear {
+        font-size: 16px;
+        height: 6vh;
+    }
+    .nav-zone {
+        height: 6vh;
+        justify-content: center;
+    }
+    .btn-grupChat {
+        font-size: 1.5vh;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    #search-header,
+    .btn-header {
+        display: none;
+    }
+}
+@media (min-width: 785px) and (max-width: 1000px) { /*tablet*/
+  header {
+    height: 75vh;
+    background-position: initial;
+    background-size: contain;
+  }
+  .nav-zone{
+    height: 10vh;
+    justify-content: center;
+  }
+  #search-header, .btn-header, #infoot2{
+    display: none;
+  }
+  h1{
+    font-size: 70px;
+    }
+}

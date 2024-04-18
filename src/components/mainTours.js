@@ -9,8 +9,17 @@ export const MainChatTours = () => {
     </p>
     <hr>
   </div>
+  
   <div id="infOnPC">
     <img class="img-place" src="" alt="Image of the place">
+    <div class="image-guides-grid">
+      <img src="" alt="01-puntaArenasGuide" id="puntGuide" class="img-guides"/>
+      <img src="" alt="02-sanJoseGuide" id="sanJGuide" class="img-guides"/>
+      <img src="" alt="03-alajuelaGuide" id="alajGuide" class="img-guides"/>
+      <img src="" alt="04-cartagoGuide" id="cartagGuide" class="img-guides"/>
+      <img src="" alt="05-guanacasteGuide" id="guanaGuide" class="img-guides"/>
+      <img src="" alt="06-limonGuide" id="limGuide" class="img-guides"/>
+    </div>
     <hr>
   </div>
   <h1 class="placeName"></h1>
