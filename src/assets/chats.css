@@ -61,7 +61,7 @@
   .greating-zone {
     margin-top: 7%;
   }
-  #infOnPC hr{
+  .verticaLine{
     display: none;
   }
 }
@@ -120,7 +120,7 @@
   .greating-zone {
     margin-top: 5%;
   }
-  #infOnPC hr{
+  .verticaLine{
     display: none;
   }
 }
@@ -182,12 +182,14 @@
   .greating-zone {
     margin-top: -2%;
   }
-  #infOnPC hr{
+  .verticaLine {
+    grid-column: 1;
+    grid-row: 2/4;
     width: 2px;
     background-color: #F56960;
-    height: 255%;
+    height: 129%;
     margin-left: 96%;
-    margin-top: -69%;
+    margin-top: 20%;
   }
 
   }
@@ -338,6 +340,7 @@
   color: #fff;
   align-items: center;
   margin-right: 45%;
+  margin-bottom: 1%;
 }
 
 .enterMessage {
@@ -355,15 +358,85 @@
   margin-left: 29%;
 }
 
+/* Imagenes de Group chat*/
 .image-guides-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 19%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: 40%;
+  justify-items: center;
+  margin-left: -23%;
 }
 
 .img-guides {
-  max-width: 14%;
+  max-width: 185px;
   height: auto;
   clip-path: circle(48% at center);
+  margin-top: 11%;
+  overflow: hidden;
+  margin-left: 32%;
+  margin-bottom: 15%;
+}
+
+.name-guides{
+  text-transform: uppercase;
+  margin-top: -3%;
+  margin-left: 36%;
+  color: #F56960;
+  font-weight: 700;
+}
+#puntGuide {
+  grid-column: 1;
+  grid-row: 1;
+}
+#puntNameGuide {
+  grid-column: 1;
+  grid-row: 1;
+}
+#sanJGuide{
+  grid-column: 2;
+  grid-row: 1;
+}
+#sanjNameGuide{
+  grid-column: 2;
+  grid-row: 1;
+}
+#alajGuide {
+  grid-column: 1;
+  grid-row: 2;
+}
+#alajNameGuide{
+  grid-column: 1;
+  grid-row: 2;
+}
+#cartagGuide{
+  grid-column: 2;
+  grid-row: 2;
+}
+#cartNameGuide{
+  grid-column: 2;
+  grid-row: 2;
+}
+#guanaGuide{
+  grid-column: 1;
+  grid-row: 3;
+}
+#guanaNameGuide{
+  grid-column: 1;
+  grid-row: 3;
+}
+#limGuide{
+  grid-column: 2;
+  grid-row: 3;
+}
+#limonNameGuide{
+  grid-column: 2;
+  grid-row: 3;
+}
+.groupChatGreeting{
+  font-size: 55px;
+  text-align: center;
+  margin-bottom: -12%;
+  margin-top: 2%;
+  color: #ab5aa1;
 }

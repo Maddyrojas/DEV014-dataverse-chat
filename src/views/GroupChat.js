@@ -13,30 +13,48 @@ const imgPlace = main.querySelector('img[class="img-place"]');
 export const GroupChat = () => {
   const btnSendMsj = main.querySelector('button[class="btn-sendMsj"]');
   const textArea = main.querySelector("textArea");
+  const arrowBtn = main.querySelector('img[class="arrowBTN"]');
+
+  //Alajuela
   const alajuelaTour = data.find(tour => tour.location === "Alajuela");
   const alajuelaGuide = main.querySelector('img[id="alajGuide"]');
+  const alajNameGuide = main.querySelector('p[id="alajNameGuide"]');
   alajuelaGuide.src = alajuelaTour.guideImg;
+  alajNameGuide.textContent = alajuelaTour.guideName;
   //Puntarenas
   const puntArenasTour = data.find(tour => tour.location === "Puntarenas");
   const puntArenasGuide = main.querySelector('img[id="puntGuide"]');
+  const puntNameGuide = main.querySelector('p[id="puntNameGuide"]');
   puntArenasGuide.src = puntArenasTour.guideImg;
+  puntNameGuide.textContent = puntArenasTour.guideName;
   //San José
   const sanJoseTour = data.find(tour => tour.location === "San José");
   const sanJoseGuide = main.querySelector('img[id="sanJGuide"]');
+  const sanjNameGuide = main.querySelector('p[id="sanjNameGuide"]');
   sanJoseGuide.src = sanJoseTour.guideImg;
+  sanjNameGuide.textContent = sanJoseTour.guideName;
   //Cartago
   const cartagoTour = data.find(tour => tour.location === "Cartago");
   const cartagoGuide = main.querySelector('img[id="cartagGuide"]');
+  const cartNameGuide = main.querySelector('p[id="cartNameGuide"]');
   cartagoGuide.src = cartagoTour.guideImg;
+  cartNameGuide.textContent = cartagoTour.guideName;
   //Limón
   const limonTour = data.find(tour => tour.location === "Limón");
   const limonGuide = main.querySelector('img[id="limGuide"]');
+  const limonNameGuide = main.querySelector('p[id="limonNameGuide"]');
   limonGuide.src = limonTour.guideImg;
+  limonNameGuide.textContent = limonTour.guideName;
   //"Guanacaste"
   const guanacasteTour = data.find(tour => tour.location === "Guanacaste");
   const guanacasteGuide = main.querySelector('img[id="guanaGuide"]');
+  const guanaNameGuide = main.querySelector('p[id="guanaNameGuide"]');
   guanacasteGuide.src = guanacasteTour.guideImg;
   imgPlace.style.display = "none";
+  arrowBtn.style.backgroundColor= "#fff";
+  guanaNameGuide.textContent = guanacasteTour.guideName;
+
+
   const groupChat = document.createElement("div");
   groupChat.classList.add("groupChatView");
   const contentGroupChat = document.createElement("div");

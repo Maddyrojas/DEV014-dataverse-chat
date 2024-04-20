@@ -14,14 +14,20 @@ export const MainChatTours = () => {
     <img class="img-place" src="" alt="Image of the place">
     <div class="image-guides-grid">
       <img src="" alt="01-puntaArenasGuide" id="puntGuide" class="img-guides"/>
+      <p id= "puntNameGuide" class="name-guides"></p>
       <img src="" alt="02-sanJoseGuide" id="sanJGuide" class="img-guides"/>
+      <p id= "sanjNameGuide" class="name-guides"></p>
       <img src="" alt="03-alajuelaGuide" id="alajGuide" class="img-guides"/>
+      <p id= "alajNameGuide" class="name-guides"></p>
       <img src="" alt="04-cartagoGuide" id="cartagGuide" class="img-guides"/>
+      <p id= "cartNameGuide" class="name-guides"></p>
       <img src="" alt="05-guanacasteGuide" id="guanaGuide" class="img-guides"/>
+      <p id="guanaNameGuide" class="name-guides"></p>
       <img src="" alt="06-limonGuide" id="limGuide" class="img-guides"/>
+      <p id= "limonNameGuide" class="name-guides"></p>
     </div>
-    <hr>
   </div>
+  <hr class="verticaLine">
   <h1 class="placeName"></h1>
   <ul class="cloud-zone">
     <li>Diversión</li>
@@ -33,7 +39,7 @@ export const MainChatTours = () => {
   <div class="aiInteractions">
     <textarea id="userTextArea"></textarea>
     <button class="btn-sendMsj">
-      <img src="https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/2997f934b10d9d3009c6a8722abcaee1854f74a9/imgs/%F0%9F%A6%86%20icon%20_navigation_.svg" alt="bntIconArrow">
+      <img src="https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/2997f934b10d9d3009c6a8722abcaee1854f74a9/imgs/%F0%9F%A6%86%20icon%20_navigation_.svg" class="arrowBTN" alt="bntIconArrow">
     </button>
   </div>
     <div class="descrip-IndividualChat" id="infOnDesk">
