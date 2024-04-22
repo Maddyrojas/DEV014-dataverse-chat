@@ -49,7 +49,7 @@ Funcionalidades mínimas que debe tener:
 * Usando la API de Open AI, la aplicación debe permitir al usuario interactuar con un personaje/entidad a través de un chat.
   
 
-![Captura de conversación](image-1.png)
+![Individual Chat](https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/main/imgs/IndividualChat.png)
 
 * La aplicación debe  permitir al usuario interactuar de manera simultánea con **todos** los personajes/entidades a través de un chat:
   - Esta funcionalidad debe cargarse en la URL `/panel`
@@ -59,16 +59,16 @@ Funcionalidades mínimas que debe tener:
   - Indicar visualmente cuando uno o varios personajes/entidades esten generando una respuesta al mensaje enviado
 * La aplicación debe informar a la usuaria los errores que puedan surgir al interactuar con la API, como por ejemplo alcanzar la cuota de tokens por minuto o cualquier otro error relacionado con la API. Debería proporcionarse una descripción clara de la causa del problema y posibles soluciones.
 
-![Captura de conversación grupal](image-2.png)
+![Group Chat](https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/main/imgs/GrupalChat.png)
 
 ### Funcionalidades en Home:
 #### Zona de Ordenar y filtrar
-Permite limpiar los datos filtrados, ordenados y los porcentajes a su estado inicial.
+Este espacio permite dar control al usuario sobre los datos que quieren visualizar podran filtar por provincias de Costa Rica y ordenar por orden alfabetico y por costo promedio, ademas podran resetar las busquedas a traves del botón limpiar.
 #### Tambien se encuenta la Zona de 'Compute Stats'
  - Nos indica cual es el % porcentaje de lugares turísticos por provincia con determinado tipo de turismo como: playa, aventura y cultural.
 ![imageVizualizarPorcentajes](https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/README/images/image3.png)
 
-## Beneficios:
+#### Beneficios:
 
 `Información completa:` Accede a toda la información relevante para tomar decisiones informadas sobre tu viaje.
 
@@ -78,7 +78,7 @@ Permite limpiar los datos filtrados, ordenados y los porcentajes a su estado ini
 
 `Planificación eficiente:` Ahorra tiempo y dinero al tener una mejor idea de lo que te espera en tu viaje.
 
-  ## Pura Vida Tour es la herramienta perfecta para:
+  #### Pura Vida Tour es la herramienta perfecta para:
 
 `Viajeros primerizos:` Que buscan información completa y organizada para planificar su viaje a Costa Rica.
 
@@ -148,8 +148,8 @@ Se han creado vistas para mobile, tablet y desktop.
 Se ha utilizado un diseño responsive para que la aplicación se adapte a diferentes dispositivos.
 
 ### Despliegue:
-La aplicación se ha desplegado en GitHub Pages.
-https://maddyrojas.github.io/DEV014-Dataverse/src/
+La aplicación se ha desplegado en Netlify.
+https://puravida-tours.netlify.app/
 
 ### Prototipo de Alta Fidelidad
 
@@ -499,9 +499,8 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 </p></details>
 
 ## 7. Agradecimiento
+  A Laboratoria por el reto.
 
-A Laboratoria por el reto.
+  A la comunidad de GitHub por su apoyo.
 
-A la comunidad de GitHub por su apoyo.
-
-Al equipo de trabajo.
+  Al equipo de trabajo.
