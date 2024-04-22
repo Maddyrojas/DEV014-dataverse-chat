@@ -4,12 +4,11 @@ import { MainHome } from "../components/mainHome.js";
 import data from "../data/dataset.js";
 import { filterData, sortData, computeStats } from '../lib/dataFunction.js';
 import { navigateTo } from "../router.js";
-import { setApiKey } from "../lib/apiKey.js"
-
+import { setApiKey, getApiKey } from "../lib/apiKey.js"
 const mainHomeElement = MainHome();
 const headerElement = Header();
 const footerElement = Footer();
-
+const modal = document.getElementById("modal");
 
 function renderComputeStats(data) {
   const arrCompute = computeStats(data);
@@ -47,7 +46,13 @@ function renderItems(dataset) {
     const btnChat = list.querySelector('button[class="btnChat"]');
     const btnInfo = list.querySelector('button[id="btnInfo"]');
     btnChat.addEventListener('click', () => {
-      navigateTo('/chat', { name: element.name })
+      if (getApiKey() === null) {
+        modal.style.display = "block";
+        alert("Por favor, introduce la ApiKey");
+      }
+      else {
+        navigateTo('/chat', { name: element.name });
+      }
     });
     btnInfo.addEventListener('click', () => {
       navigateTo('/tour', { name: element.name })
@@ -71,9 +76,9 @@ export const Home = () => {
   const textSearch = headerElement.querySelector('#search-header');
   const btnPanel = headerElement.querySelector('button[name="btn-grupChat"]');
   const filterZone = mainHomeElement.querySelector('div[name="filter-zone"]');
+  const liContact = headerElement.querySelector('li[id="li"]');
 
   //---------------SELECTOR MODAL-------------------//
-  const modal = document.getElementById("modal");
   const closemodal = document.getElementById("close-modal");
   const btnApi = document.querySelector('button[type="submit"]');
   const chexApi = document.getElementById("miCheckbox");
@@ -81,14 +86,15 @@ export const Home = () => {
   const textName = document.getElementById("name");
   
   //------------INITIAL CHARGE------------//
-  modal.style.display = "block";
+  if (getApiKey() === null) {
+    modal.style.display = "block";
+  }
   renderItems(sortData(newData, sortOption.value, sortAsc.value));
   renderComputeStats(newData);
   
   //------------EVENT MODAL------------//
   btnApi.addEventListener('click', () => {
     modal.style.display = "none";
-    console.log(textApi.value);
     setApiKey(textApi.value);
     if (textApi.value) {
       alert(textName.value+" Tu ApiKey es correcta \n\n\nBienvenida a Pura Vida Tours");
@@ -114,7 +120,16 @@ export const Home = () => {
   });
 
   btnPanel.addEventListener('click', () => {
-    navigateTo('/panel');
+    if (getApiKey() === null) {
+      modal.style.display = "block";
+      alert("Por favor, introduce la ApiKey");
+    } else {
+      navigateTo('/panel');
+    }
+  });
+
+  liContact.addEventListener('click', () => {
+    footerElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   //------------EVENT MAIN------------//
   filterProvincia.addEventListener('change', () => {

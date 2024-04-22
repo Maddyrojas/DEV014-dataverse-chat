@@ -3,11 +3,13 @@ import { MainChatTours } from "../components/mainTours.js";
 import data from '../data/dataset.js';
 import { communicateWithOpenAI } from "../lib/openAIApi.js";
 import { Nav } from "../components/nav.js";
+import { navigateTo } from "../router.js";
 
 const mainChatElement = MainChatTours();
 const footerElement = Footer();
-const navindividualchatElement = Nav("CONTACT");
-
+const navindividualchatElement = Nav("DETALLES");
+const liHome = navindividualchatElement.querySelector('li[id="li-home"]'); 
+//const liContact = navindividualchatElement.querySelector('li[id="li"]'); 
 const divChatZone = mainChatElement.querySelector('div[id="chat-zone"]');
 
 function enterMessage(msj) {
@@ -24,7 +26,7 @@ export const IndividualChat = (objName) => {
   const divInfoLaptop = mainChatElement.querySelector('div[class="mainDiv"]');
   const btnSendMsj = mainChatElement.querySelector('button[class="btn-sendMsj"]');
   const textArea = mainChatElement.querySelector("textArea");
-  
+  const liDetails = navindividualchatElement.querySelector('li[id="li"]');
   const guideImg = mainChatElement.querySelector('img[class="guide-img"]');
   const guideGreat = mainChatElement.querySelector ('p[class="guide-greating"]');
   const infoTour = data.find(tour => tour.name === objName.name);
@@ -36,6 +38,24 @@ export const IndividualChat = (objName) => {
   guideImg.src = infoTour.guideImg;
 
   //----------EVENT----------//
+  textArea.addEventListener('keydown', (event) => {
+    if(event.key === "Enter") {
+      const userPrompt = textArea.value;
+      textArea.value = '';
+      enterMessage(userPrompt);
+      communicateWithOpenAI(infoTour, userPrompt)
+        .then(response => {
+          const messageElement = document.createElement('div');
+          messageElement.classList.add("enterResponse");
+          messageElement.innerHTML = `<img id="guide-img-chat" class="guide-img" src=${infoTour.guideImg}>&nbsp &nbsp <strong>${infoTour.guideName}: </strong>&nbsp${response}`;
+          divChatZone.appendChild(messageElement);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        })    
+    }
+  });
+
   btnSendMsj.addEventListener('click', () => {
     const userPrompt = textArea.value;
     textArea.value = '';
@@ -49,9 +69,16 @@ export const IndividualChat = (objName) => {
       })
       .catch(error => {
         console.error('Error:', error);
-      })
+      })   
   });
-
+  //----------EVENT REDIRECCIONAR HOME Y CONTACT----------// 
+  liHome.addEventListener('click', () => {
+    navigateTo('/');
+  });
+  liDetails.addEventListener('click', () => {
+    navigateTo('/tour', objName);
+  });
+  
   individualChat.append(navindividualchatElement, mainChatElement, footerElement);
   return individualChat;
 }

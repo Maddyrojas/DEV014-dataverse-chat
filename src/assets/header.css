@@ -47,6 +47,10 @@ header {
 .li-nav {
     margin-top: 10px;
     margin-right: 10px;
+    color: white;
+    margin: 20px;
+    font-size: 33px;
+    font-weight: 600;
 }
 
 #search-header {

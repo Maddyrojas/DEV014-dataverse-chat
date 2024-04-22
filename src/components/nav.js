@@ -4,8 +4,8 @@ export const Nav = (liRoot) => {//contact - details - help
   navIndvChat.innerHTML = `
     <nav class = "nav-mobile">
       <ul>
-        <li class="li-nav"><a href="">HOME</a></li>
-        <li class="li-nav" id="li"><a href="">${liRoot}</a></li>
+        <li class="li-nav" id="li-home">HOME</li>
+        <li class="li-nav" id="li">${liRoot}</li>
       </ul>
     </nav>
     `;

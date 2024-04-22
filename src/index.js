@@ -19,3 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {//Make sure you handle the in
   setRootEl(selectRoot);
   onURLChange(window.location);
 });
+
+window.addEventListener("popstate", () => {
+  onURLChange(window.location);
+});

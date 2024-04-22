@@ -328,6 +328,7 @@
     padding-left: 3%;
     padding-right: 3%;
     margin-right: 3%;
+    text-align: left;
   }
   .placeName {
     font-size: 52px;

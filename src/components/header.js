@@ -18,6 +18,8 @@ export const Header = () => {
   
   //-----------select header ------------//
   const enterNav = header.querySelector('div[id="enterNav"]');
+  const navHome = navElement.querySelector('nav[class="nav-mobile"]');
+  navHome.style.backgroundImage = 'none';
   enterNav.appendChild(navElement);
   return header;
 };

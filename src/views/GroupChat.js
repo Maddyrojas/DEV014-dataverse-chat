@@ -3,6 +3,7 @@ import { Nav } from "../components/nav.js";
 import { MainChatTours } from "../components/mainTours.js";
 import { communicateWithOpenAI } from "../lib/openAIApi.js";
 import data from '../data/dataset.js';
+import { navigateTo } from "../router.js";
 //import { Guides } from "../components/groupchating.js";
 //import { filterData } from '../lib/dataFunctions.js';
 const main = MainChatTours();
@@ -11,10 +12,13 @@ const divChatZone = main.querySelector('div[id="chat-zone"]');
 const imgPlace = main.querySelector('img[class="img-place"]');
 
 export const GroupChat = () => {
-  const btnSendMsj = main.querySelector('button[class="btn-sendMsj"]');
-  const textArea = main.querySelector("textArea");
+  const liHome = header.querySelector('li[id="li-home"]');
+  // const liHelp = header.querySelector('li[id="li"]);
+  
+  liHome.addEventListener('click', () => {
+    navigateTo('/');
+  });
   const arrowBtn = main.querySelector('img[class="arrowBTN"]');
-
   //Alajuela
   const alajuelaTour = data.find(tour => tour.location === "Alajuela");
   const alajuelaGuide = main.querySelector('img[id="alajGuide"]');
@@ -62,6 +66,28 @@ export const GroupChat = () => {
     <p class="groupChatGreeting">¡Hola! Bienvenid@ a Costa Rica ¿En que podemos servirte?</p>
     `;
   //contentGroupChat.appendChild(Guides(data, main));
+
+  const btnSendMsj = main.querySelector('button[class="btn-sendMsj"]');
+  const textArea = main.querySelector("textArea");
+
+  textArea.addEventListener('keydown', (event) => {
+    if(event.key === "Enter") {
+      const userPrompt = textArea.value;
+      textArea.value = '';
+      enterMessage(userPrompt);
+      
+      const allMsj = data.map((item) => {
+        return [communicateWithOpenAI(item, userPrompt), item.name]
+      });
+      Promise.all(allMsj).then(response => {
+        enterResponse(response);
+      })
+        .catch(error => {
+          console.error('Erro:', error);
+        }); 
+    }
+  });
+
   btnSendMsj.addEventListener('click', () => {
     const userPrompt = textArea.value;
     textArea.value = '';
