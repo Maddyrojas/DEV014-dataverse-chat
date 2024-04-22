@@ -1,19 +1,51 @@
-.mainDescriptionx{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(245, 105, 96, 0.7);
+.mainDescriptionx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(245, 105, 96, 0.7);
+}
+
+.divDescriptionx {
+  margin-top: 10vh;
+  padding: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  background-color: white;
+}
+
+.h2desc {
+  width: 95%;
+  margin: 1%;
+}
+
+.h1Descriptionx,
+.h3Descriptionx,
+.imgDescriptionx {
+  margin: 5%;
+  width: 95%;
+}
+
+.divDescriptionx p{
+  margin-top: 10%;
+}
+
+
+@media (max-width: 785px) {/*phone*/
+  .divDescriptionx p  {
+    font-size: 14px;
+    width: 100%;
   }
-  .divDescriptionx{
-    margin-top: 10vh;
-    padding: 10vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    background-color: white;
+  .divDescriptionx strong{
+    font-size: 12px;
+    width: 100%;
   }
-  .h1Descriptionx, .h3Descriptionx, .imgDescriptionx{
-    margin: 10vh;
+  .h2desc{
+    font-size: 15px;
   }
+  .h3Descriptionx{
+    font-size: 12px;
+  }
+}

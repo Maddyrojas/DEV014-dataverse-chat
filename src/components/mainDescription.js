@@ -7,11 +7,13 @@ export const MainDescription = (tour) => {
   div.innerHTML = `
   <h1 class="h1Descriptionx">${tour.name}</h1>
   <img src= ${tour.imageUrl} alt=${tour.shortDescription} class="imgDescriptionx">
-  <h2>CATEGORIA: ${tour.tipoTurismo }</h2>
-  <h2>LOCATION: ${tour.location}</h2>
+  <h2 class="h2desc">CATEGORIA: ${tour.tipoTurismo }</h2>
+  <h2 class="h2desc">LOCATION: ${tour.location}</h2>
   <h3 class="h3Descriptionx">${tour.description}</h3>
-  <p>Podras hacer tus compras en <strong>${tour.facts.compras}</strong></p>
-  <p>Te recomendados dejustar ricos platillos en <strong>${tour.facts.alimentacion}</strong></p>
+  <p>Podras hacer compras en:</p>
+  <strong>${tour.facts.compras}</strong>
+  <p>Podras degustar ricos platillos en </p>
+  <strong>${tour.facts.alimentacion}</strong>
   `;
   main.appendChild(div);
   return main;

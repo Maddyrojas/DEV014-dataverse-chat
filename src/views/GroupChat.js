@@ -1,11 +1,8 @@
 import { Nav } from "../components/nav.js";
-// import { Footer } from "./../components/footer.js";
 import { MainChatTours } from "../components/mainTours.js";
 import { communicateWithOpenAI } from "../lib/openAIApi.js";
 import data from '../data/dataset.js';
 import { navigateTo } from "../router.js";
-//import { Guides } from "../components/groupchating.js";
-//import { filterData } from '../lib/dataFunctions.js';
 const main = MainChatTours();
 const header = Nav("HELP");
 const divChatZone = main.querySelector('div[id="chat-zone"]');
@@ -65,7 +62,6 @@ export const GroupChat = () => {
   contentGroupChat.innerHTML = `
     <p class="groupChatGreeting">¡Hola! Bienvenid@ a Costa Rica ¿En que podemos servirte?</p>
     `;
-  //contentGroupChat.appendChild(Guides(data, main));
 
   const btnSendMsj = main.querySelector('button[class="btn-sendMsj"]');
   const textArea = main.querySelector("textArea");
@@ -112,8 +108,6 @@ function enterMessage(msj) {
   messageElement.classList.add("enterMessage");
   messageElement.innerHTML = `<strong>MADELYN:</strong> ${msj}`;
   divChatZone.appendChild(messageElement);
-  //chatContainer.scrollTop = chatContainer.scrollHeight;
-  console.log(msj);
 }
 
 function enterResponse(array,) {

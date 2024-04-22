@@ -9,7 +9,6 @@ const mainChatElement = MainChatTours();
 const footerElement = Footer();
 const navindividualchatElement = Nav("DETALLES");
 const liHome = navindividualchatElement.querySelector('li[id="li-home"]'); 
-//const liContact = navindividualchatElement.querySelector('li[id="li"]'); 
 const divChatZone = mainChatElement.querySelector('div[id="chat-zone"]');
 
 function enterMessage(msj) {
