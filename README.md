@@ -13,7 +13,7 @@
 ***
 
 ## 1. Preámbulo
-¿Qué tal si pudiéramos conversar con un guía que te invite a conocer los mejores lugares de Costa Rica? Hoy en dia la inteligencia artificial nos brinda un mundo de posibilidades, con el acceso de informacion inmediata y veraz de lugares que nunca hemos visitado y nos encantaria conocer con tan solo enviar una pregunta. Es por esta razon que hemos creado la SPA: Pura Vida Tours.
+¿Qué tal si pudiéramos conversar con un guía que te invite a conocer los mejores lugares de Costa Rica? Hoy en dia la inteligencia artificial nos brinda un mundo de posibilidades, con el acceso de informacion inmediata y veraz de lugares que nunca hemos visitado y nos encantaria conocer con tan solo enviar una pregunta. Es por esta razon que hemos creado la SPA: ![Pura Vida Tours](https://puravida-tours.netlify.app/).
 
   ![vista Principal 1](https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/main/imgs/vistaPrincipal.png)
   ![vista Principal 2](https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/main/imgs/vistaPrincipal2.png)
@@ -64,10 +64,12 @@ Funcionalidades mínimas que debe tener:
 ### Funcionalidades en Home:
 #### Zona de Ordenar y filtrar
 Este espacio permite dar control al usuario sobre los datos que quieren visualizar podran filtar por provincias de Costa Rica y ordenar por orden alfabetico y por costo promedio, ademas podran resetar las busquedas a traves del botón limpiar.
+
 ![imageVizualizarPorcentajes](https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/README/images/image1.png)
 
 #### Tambien se encuenta la Zona de 'Compute Stats'
  - Nos indica cual es el % porcentaje de lugares turísticos por provincia con determinado tipo de turismo como: playa, aventura y cultural.
+
 ![imageVizualizarPorcentajes](https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/README/images/image3.png)
 
 #### Beneficios:
@@ -80,7 +82,7 @@ Este espacio permite dar control al usuario sobre los datos que quieren visualiz
 
 `Planificación eficiente:` Ahorra tiempo y dinero al tener una mejor idea de lo que te espera en tu viaje.
 
-  #### Pura Vida Tour es la herramienta perfecta para:
+#### Pura Vida Tour es la herramienta perfecta para:
 
 `Viajeros primerizos:` Que buscan información completa y organizada para planificar su viaje a Costa Rica.
 
