@@ -15,7 +15,8 @@
 ## 1. Preámbulo
 ¿Qué tal si pudiéramos conversar con un guía que te invite a conocer los mejores lugares de Costa Rica? Hoy en dia la inteligencia artificial nos brinda un mundo de posibilidades, con el acceso de informacion inmediatas y veraces de lugares que nunca hemos visitado y nos encantaria conocer con tan solo enviar una pregunta. Es por esta razon que hemos creado la SPA: Pura Vida Tours.
 
-
+![vista Principal 1](https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/main/imgs/vistaPrincipal.png)
+![vista Principal 2](https://raw.githubusercontent.com/PemRug/DEV014-dataverse-chat/main/imgs/vistaPrincipal2.png)
 
 ## 2. Resumen del proyecto
 
