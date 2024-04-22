@@ -41,7 +41,7 @@ Funcionalidades mínimas que debe tener:
 * La aplicación debe ser una SPA con múltiples vistas:
   - Implementar un sistema de enrutamiento que permita la navegación dentro de la aplicación.
   - Cada vista de la aplicación debe ser cargada dinámicamente mediante JavaScript.
-  - Asegurarse de que la URL se actualice de manera acorde a la vista cargada al igual que el `title` del documento (la pestaña del navegador).
+  - Asegurarse de que la URL se actualice de manera acorde a la vista cargada al igual que el title del documento (la pestaña del navegador).
   - La aplicación debe ser capaz de cargar la vista correspondiente a la URL actual al iniciar la aplicación.
 * La aplicación debe mantener las funcionalidades de Dataverse: visualizar, filtrar, ordenar y calcular estadística de la data.
 * Al hacer clic en una tarjeta de personaje/entidad, la aplicación debe redirigirse a una vista **con su propia URL** que muestre la información detallada sobre ese personaje/entidad en particular
@@ -64,6 +64,8 @@ Funcionalidades mínimas que debe tener:
 ### Funcionalidades en Home:
 #### Zona de Ordenar y filtrar
 Este espacio permite dar control al usuario sobre los datos que quieren visualizar podran filtar por provincias de Costa Rica y ordenar por orden alfabetico y por costo promedio, ademas podran resetar las busquedas a traves del botón limpiar.
+![imageVizualizarPorcentajes](https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/README/images/image1.png)
+
 #### Tambien se encuenta la Zona de 'Compute Stats'
  - Nos indica cual es el % porcentaje de lugares turísticos por provincia con determinado tipo de turismo como: playa, aventura y cultural.
 ![imageVizualizarPorcentajes](https://raw.githubusercontent.com/Maddyrojas/DEV014-Dataverse/main/README/images/image3.png)
